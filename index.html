@@ -4,162 +4,259 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atria - Vision & Mission Feedback</title>
-    <!-- Tailwind CSS CDN for modern styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for Montserrat -->
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        /* Custom CSS for basic font and body styling, overriding Tailwind defaults if needed */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f0f2f5; /* Light gray background */
-            color: #333; /* Default text color */
-        }
-        /* Ensure images are responsive */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        /* Custom styling for radio buttons to improve appearance */
-        .radio-group input[type="radio"] {
-            margin-right: 0.5rem;
-            accent-color: #004d99; /* Atria blue */
-        }
-        /* Style for required fields indicator */
-        .form-group label[for]:after {
-            content: '*';
-            color: #ef4444; /* Red for required fields */
-            margin-left: 0.25rem;
-        }
-        .question:after {
-            content: '*';
-            color: #ef4444; /* Red for required fields */
-            margin-left: 0.25rem;
-        }
-    </style>
+     <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
-    <header class="bg-white shadow-md">
-        <!-- Top Bar -->
-        <div class="bg-[#004d99] text-white text-sm py-2 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex flex-wrap gap-x-4 gap-y-2 mb-2 md:mb-0">
-                <span><i class="fas fa-phone mr-1"></i> +91 7093029032</span>
-                <span><i class="fas fa-envelope mr-1"></i> admissions@atria.edu</span>
+    <header class="atria-header">
+        <div class="top-bar">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +91 7093029032</span>
+                <span><i class="fas fa-envelope"></i> admissions@atria.edu</span>
             </div>
-            <div class="flex flex-wrap gap-x-4 gap-y-2">
-                <a href="#" class="hover:underline">Contact Us</a>
-                <a href="#" class="hover:underline">NAAC</a>
-                <a href="#" class="hover:underline">IQAC</a>
-                <a href="#" class="hover:underline">MBA</a>
-                <a href="#" class="hover:underline">Research</a>
-                <a href="#" class="hover:underline">Student Login</a>
+            <div class="quick-links">
+                <a href="#">Contact Us</a>
+                <a href="#">NAAC</a>
+                <a href="#">IQAC</a>
+                <a href="#">MBA</a>
+                <a href="#">Research</a>
+                <a href="#">Student Login</a>
             </div>
         </div>
-        <!-- Main Navbar -->
-        <div class="flex flex-col md:flex-row justify-between items-center py-4 px-4 md:px-8">
-            <div class="logo mb-4 md:mb-0">
-                <img src="https://atria.edu/_next/static/media/Atria-logo.f721d879.png" alt="Atria Logo" class="h-12">
+        <div class="main-navbar">
+            <div class="logo">
+                <img src="https://atria.edu/_next/static/media/Atria-logo.f721d879.png" alt="Atria Logo">
             </div>
             <nav>
-                <ul class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-lg font-semibold">
-                    <li><a href="#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Home</a></li>
-                    <li><a href="#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">About Us</a></li>
-                    <li><a href="#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Academics</a></li>
-                    <li><a href="#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Admissions</a></li>
-                    <li><a href="#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Campus Life</a></li>
-                    <!-- WHERE TO WRITE: Add more navigation links here -->
-                </ul>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Academics</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Campus Life</a></li>
+                    </ul>
             </nav>
         </div>
     </header>
 
-    <div class="container mx-auto p-4 md:p-8 bg-white shadow-lg rounded-lg mt-8 mb-8 max-w-3xl">
-        <h1 class="text-3xl font-bold text-center mb-4 text-[#004d99]">Dear Stakeholder,</h1>
-        <p class="text-center text-lg mb-6">Greetings! Kindly submit the College and Department Vision-Mission feedback.</p>
+    <div class="container">
+        <h1>Dear Stakeholder,</h1>
+        <p>Greetings! Kindly submit the College and Department Vision-Mission feedback.</p>
+        <p>
+            The Vision and Mission statements are proposed to be updated for the academic year 2025-26 in alignment with the National Education Policy (NEP), the institute's Autonomous status, and evolving industrial expectations. The revision also aims to promote and inculcate innovation and incubation culture in academics and research. We kindly request you to share your valuable suggestions and feedback on the proposed Vision and Mission statements.
+        </p>
 
-        <form id="feedbackForm" class="space-y-6">
-            <!-- Stake Holder Type -->
+        <form id="feedbackForm" action="https://xyxyxyx.com" method="POST">
             <div class="form-group">
-                <label for="stakeHolderType" class="block text-gray-700 text-sm font-bold mb-2">Stake Holder Type</label>
-                <select id="stakeHolderType" name="stakeHolderType" required
-                        class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent">
+                <label for="fullName">Name</label>
+                <input type="text" id="fullName" name="XYXYXYX" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNo">Phone No.</label>
+                <input type="tel" id="phoneNo" name="XYXYXYX" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="XYXYXYX" required>
+            </div>
+
+            <div class="form-group">
+                <label for="stakeHolderType">Stake Holder Type</label>
+                <select id="stakeHolderType" name="XYXYXYX" required>
                     <option value="">Select</option>
-                    <option value="student">Student</option>
-                    <option value="faculty">Faculty</option>
-                    <option value="alumni">Alumni</option>
-                    <option value="industry">Industry</option>
-                    <option value="parent">Parent</option>
-                    <option value="other">Other</option>
-                    <!-- WHERE TO WRITE: Add more stakeholder types here if needed -->
+                    <option value="Student">Student</option>
+                    <option value="Alumni">Alumni</option>
+                    <option value="Parent">Parent</option>
+                    <option value="Faculty and Staff">Faculty and Staff (Atria IT)</option>
+                    <option value="Employer">Employer</option>
+                    <option value="Entrepreneur">Entrepreneur</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 
-            <!-- Vision and Mission Display -->
-            <div class="vision-mission-display bg-blue-50 p-6 rounded-lg border border-blue-200">
-                <p class="mb-3"><strong>College Vision:</strong> To emerge as a premier Technical Institution in the field of engineering and research with a focus to produce professionally competent and socially sensitive engineers capable of working in a multidisciplinary global environment.</p>
-                <p><strong>College Mission:</strong> To provide high quality technical education through a creative balance of academia and industry by adopting highly effective teaching learning processes<br>To promote multidisciplinary research with a global perspective to attain professional excellence<br>To establish standards that inculcate ethical and moral values that contribute to growth in the Career and development of society.</p>
-                <!-- WHERE TO WRITE: Update or add more details about Vision/Mission here -->
-            </div>
-
-            <!-- Vision Feedback -->
-            <div class="form-group">
-                <p class="question block text-gray-700 text-sm font-bold mb-2">Do you think our vision statement captures where we are heading as an Organization to produce competent engineers?</p>
-                <div class="radio-group flex flex-wrap gap-4 mb-4">
-                    <label class="inline-flex items-center">
-                        <input type="radio" name="visionFeedback" value="stronglyAgree" required class="form-radio"> Strongly Agree
-                    </label>
-                    <label class="inline-flex items-center">
-                        <input type="radio" name="visionFeedback" value="agree" class="form-radio"> Agree
-                    </label>
-                    <label class="inline-flex items-center">
-                        <input type="radio" name="visionFeedback" value="neutral" class="form-radio"> Neutral
-                    </label>
-                    <label class="inline-flex items-center">
-                        <input type="radio" name="visionFeedback" value="disagree" class="form-radio"> Disagree
-                    </label>
-                    <label class="inline-flex items-center">
-                        <input type="radio" name="visionFeedback" value="stronglyDisagree" class="form-radio"> Strongly Disagree
-                    </label>
+            <div id="studentFields" class="stakeholder-specific-fields" style="display:none;">
+                <div class="form-group">
+                    <label for="studentRollNo">Roll No.</label>
+                    <input type="text" id="studentRollNo" name="XYXYXYX">
                 </div>
-                <label for="visionSuggestion" class="block text-gray-700 text-sm font-bold mb-2">Suggestion : What would you like to add or remove in the above statement?</label>
-                <textarea id="visionSuggestion" name="visionSuggestion" rows="5"
-                          class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent resize-y"></textarea>
-                <!-- WHERE TO WRITE: Add validation messages or dynamic content for vision feedback -->
-            </div>
-
-            <!-- Mission Feedback -->
-            <div class="form-group">
-                <p class="question block text-gray-700 text-sm font-bold mb-2">Does our mission statement reflect our fundamental and unique purpose?</p>
-                <div class="radio-group flex flex-wrap gap-4 mb-4">
-                    <label class="inline-flex items-center">
-                        <input type="radio" name="missionFeedback" value="stronglyAgree" required class="form-radio"> Strongly Agree
-                    </label>
-                    <label class="inline-flex items-center">
-                        <input type="radio" name="missionFeedback" value="agree" class="form-radio"> Agree
-                    </label>
-                    <label class="inline-flex items-center">
-                        <input type="radio" name="missionFeedback" value="neutral" class="form-radio"> Neutral
-                    </label>
-                    <label class="inline-flex items-center">
-                        <input type="radio" name="missionFeedback" value="disagree" class="form-radio"> Disagree
-                    </label>
-                    <label class="inline-flex items-center">
-                        <input type="radio" name="missionFeedback" value="stronglyDisagree" class="form-radio"> Strongly Disagree
-                    </label>
+                <div class="form-group">
+                    <label for="studentBranch">Branch</label>
+                    <input type="text" id="studentBranch" name="XYXYXYX">
                 </div>
-                <label for="missionSuggestion" class="block text-gray-700 text-sm font-bold mb-2">Suggestion : What would you like to add or remove in the above statement?</label>
-                <textarea id="missionSuggestion" name="missionSuggestion" rows="5"
-                          class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent resize-y"></textarea>
-                <!-- WHERE TO WRITE: Add validation messages or dynamic content for mission feedback -->
+                <div class="form-group">
+                    <label for="studentYear">Year</label>
+                    <input type="text" id="studentYear" name="XYXYXYX">
+                </div>
             </div>
 
-            <!-- Select Department -->
+            <div id="alumniFields" class="stakeholder-specific-fields" style="display:none;">
+                <div class="form-group">
+                    <label for="alumniBranch">Branch</label>
+                    <input type="text" id="alumniBranch" name="XYXYXYX">
+                </div>
+                <div class="form-group">
+                    <label for="alumniYearPassedOut">Year of Passed Out</label>
+                    <input type="text" id="alumniYearPassedOut" name="XYXYXYX">
+                </div>
+                <div class="form-group">
+                    <label for="alumniPresentAddress">Present Address</label>
+                    <textarea id="alumniPresentAddress" name="XYXYXYX" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="alumniPresentPositionAddress">Present Position & Address</label>
+                    <textarea id="alumniPresentPositionAddress" name="XYXYXYX" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div id="parentFields" class="stakeholder-specific-fields" style="display:none;">
+                <div class="form-group">
+                    <label for="parentStudentName">Name of the Student</label>
+                    <input type="text" id="parentStudentName" name="XYXYXYX">
+                </div>
+                <div class="form-group">
+                    <label for="parentStudentBranch">Student's Branch</label>
+                    <input type="text" id="parentStudentBranch" name="XYXYXYX">
+                </div>
+                <div class="form-group">
+                    <label for="parentPresentAddress">Present Address</label>
+                    <textarea id="parentPresentAddress" name="XYXYXYX" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div id="facultyStaffFields" class="stakeholder-specific-fields" style="display:none;">
+                <div class="form-group">
+                    <label for="facultyBranchDept">Branch/Department</label>
+                    <input type="text" id="facultyBranchDept" name="XYXYXYX">
+                </div>
+                <div class="form-group">
+                    <label for="facultyDesignation">Designation</label>
+                    <input type="text" id="facultyDesignation" name="XYXYXYX">
+                </div>
+            </div>
+
+            <div id="employerFields" class="stakeholder-specific-fields" style="display:none;">
+                <div class="form-group">
+                    <label for="employerCompanyName">Company Name</label>
+                    <input type="text" id="employerCompanyName" name="XYXYXYX">
+                </div>
+                <div class="form-group">
+                    <label for="employerCompanyAffiliation">Company Affiliation</label>
+                    <input type="text" id="employerCompanyAffiliation" name="XYXYXYX">
+                </div>
+            </div>
+
+            <div id="entrepreneurFields" class="stakeholder-specific-fields" style="display:none;">
+                <div class="form-group">
+                    <label for="entrepreneurCompanyName">Company Name</label>
+                    <input type="text" id="entrepreneurCompanyName" name="XYXYXYX">
+                </div>
+                <div class="form-group">
+                    <label for="entrepreneurDesignation">Designation</label>
+                    <input type="text" id="entrepreneurDesignation" name="XYXYXYX">
+                </div>
+                <div class="form-group">
+                    <label for="entrepreneurSpecialization">Specialization</label>
+                    <input type="text" id="entrepreneurSpecialization" name="XYXYXYX">
+                </div>
+                <div class="form-group">
+                    <label for="entrepreneurContactAddress">Contact Address</label>
+                    <textarea id="entrepreneurContactAddress" name="XYXYXYX" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="vision-mission-display">
+                <h3>Institute's New Initiatives:</h3>
+                <ul>
+                    <li>Implementation of an Autonomous and Industry-Relevant Curriculum</li>
+                    <li>Adoption of Activity-Based Assignments and Assessments</li>
+                    <li>Establishment of Nine Centers of Excellence in collaboration with industry and academia</li>
+                    <li>Formation of Eleven Student Technical Clubs to foster multidisciplinary technical skills</li>
+                    <li>Functioning of Ten Active Professional Clubs for professional growth and networking</li>
+                    <li>Recognition of Ten Research Centers focused on cutting-edge innovations Promotion of Socially Relevant, Project-Based Learning throughout the students' academic journey at Atria, aligned with Sustainable Development Goals (SDGs)</li>
+                </ul>
+            </div>
+
+            <div class="vision-mission-display">
+                <h2>Proposed Vision & Mission Statements:</h2>
+                <p><strong>Vision:</strong> To be a pioneering institution empowering learner through creative problem-solving, sustainability-focused ethical education, and a vibrant culture of interdisciplinary research, innovation, and entrepreneurship for societal advancement.</p>
+                <p><strong>Mission 1 (M1):</strong> Foster a dynamic learning environment and pedagogy that encourages creative problem-solving through innovative tools and techniques.</p>
+                <p><strong>Mission 2 (M2):</strong> Cultivate lifelong learning by engaging in eco-social problem solving aligned with sustainability goals, while nurturing ethical values and responsibility.</p>
+                <p><strong>Mission 3 (M3):</strong> To inculcate the culture of problem identification, research, innovation, and incubation by promoting strong networking with society, industry, academic institutions, and mentors, while ensuring the availability of necessary infrastructure and resources.</p>
+            </div>
+
+            <h2>Vision Feedback</h2>
+
             <div class="form-group">
-                <label for="selectDepartment" class="block text-gray-700 text-sm font-bold mb-2">Select Department</label>
-                <select id="selectDepartment" name="selectDepartment" required
-                        class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent">
+                <p class="question-text">Does the Vision emphasize sustainability, entrepreneurship, and interdisciplinary collaboration as key drivers for societal advancement?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="XYXYXYX" value="Relevant to current societal and technological needs" required> Relevant to current societal and technological needs</label>
+                    <label><input type="radio" name="XYXYXYX" value="Somewhat relevant, but could be clearer"> Somewhat relevant, but could be clearer</label>
+                    <label><input type="radio" name="XYXYXYX" value="Not relevant to present or future societal demands"> Not relevant to present or future societal demands</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question-text">Does the Vision Statement reflect the goal of delivering quality technical and management education aligned with national and international technological advancements?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="XYXYXYX" value="Relevant to current and emerging national and global technological trends" required> Relevant to current and emerging national and global technological trends</label>
+                    <label><input type="radio" name="XYXYXYX" value="Somewhat relevant, needs better alignment with global advancements"> Somewhat relevant, needs better alignment with global advancements</label>
+                    <label><input type="radio" name="XYXYXYX" value="Not relevant to present or future technological expectations"> Not relevant to present or future technological expectations</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question-text">Does the institution's current progress reflect alignment with its Vision and the future aspirations of both the institution and its stakeholders over the next 5-10 years?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="XYXYXYX" value="Relevant to the institution's long-term goals and stakeholder expectations" required> Relevant to the institution's long-term goals and stakeholder expectations</label>
+                    <label><input type="radio" name="XYXYXYX" value="Partially relevant, some gaps in alignment need to be addressed"> Partially relevant, some gaps in alignment need to be addressed</label>
+                    <label><input type="radio" name="XYXYXYX" value="Not relevant to the envisioned future direction"> Not relevant to the envisioned future direction</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="visionSuggestion">Suggestion : What would you like to add or remove in the above statement?</label>
+                <textarea id="visionSuggestion" name="XYXYXYX" rows="5"></textarea>
+            </div>
+
+            <h2>Mission Feedback</h2>
+
+            <div class="form-group">
+                <p class="question-text">Is the mission of building strong networks with society, industry, and academia, along with providing necessary infrastructure, on the right path toward fulfilling the institution's Vision?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="XYXYXYX" value="Yes, clearly on the right path" required> Yes, clearly on the right path</label>
+                    <label><input type="radio" name="XYXYXYX" value="Somewhat aligned, needs strengthening"> Somewhat aligned, needs strengthening</label>
+                    <label><input type="radio" name="XYXYXYX" value="Not aligned, needs revision"> Not aligned, needs revision</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question-text">Is the focus on lifelong learning and solving eco-social problems aligned with the Vision of societal advancement?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="XYXYXYX" value="Relevant to long-term Vision and values" required> Relevant to long-term Vision and values</label>
+                    <label><input type="radio" name="XYXYXYX" value="Somewhat relevant, can be improved"> Somewhat relevant, can be improved</label>
+                    <label><input type="radio" name="XYXYXYX" value="Not relevant, should be revised"> Not relevant, should be revised</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question-text">Is the mission of encouraging research, innovation, and collaboration with society and industry a suitable path to reach the institutional Vision?</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="XYXYXYX" value="Relevant to the Vision and future goals" required> Relevant to the Vision and future goals</label>
+                    <label><input type="radio" name="XYXYXYX" value="Somewhat relevant, needs better alignment"> Somewhat relevant, needs better alignment</label>
+                    <label><input type="radio" name="XYXYXYX" value="Not relevant, needs significant changes"> Not relevant, needs significant changes</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="missionSuggestion">Suggestion : What would you like to add or remove in the above statement?</label>
+                <textarea id="missionSuggestion" name="XYXYXYX" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="selectDepartment">Select Department</label>
+                <select id="selectDepartment" name="XYXYXYX" required>
                     <option value="">Select Department</option>
                     <option value="cse">Computer Science Engineering</option>
                     <option value="ece">Electronics and Communication Engineering</option>
@@ -167,77 +264,17 @@
                     <option value="civil">Civil Engineering</option>
                     <option value="mech">Mechanical Engineering</option>
                     <option value="other">Other</option>
-                    <!-- WHERE TO WRITE: Add more departments here -->
-                </select>
+                    </select>
             </div>
 
-            <!-- Submit Button -->
-            <div class="form-group text-center">
-                <button type="submit"
-                        class="bg-[#004d99] hover:bg-[#003366] text-white font-bold py-3 px-8 rounded-lg focus:outline-none focus:shadow-outline transition-colors duration-200 transform hover:scale-105">
+            <div class="form-group">
+                <button type="submit">
                     SUBMIT
                 </button>
-                <!-- WHERE TO WRITE: Add more buttons or actions here -->
             </div>
         </form>
     </div>
 
-    <!-- JavaScript for form handling and interactivity -->
-    <script>
-        // WHERE TO WRITE: Your JavaScript code goes here.
-        // For example, you might want to handle form submission,
-        // display a success message, or perform validation.
-
-        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Basic form validation check (browser's built-in validation handles 'required')
-            if (!this.checkValidity()) {
-                // If form is not valid, the browser will show default validation messages
-                return;
-            }
-
-            // Collect form data
-            const formData = new FormData(this);
-            const data = {};
-            for (const [key, value] of formData.entries()) {
-                data[key] = value;
-            }
-
-            console.log('Form Data Submitted:', data);
-
-            // WHERE TO WRITE:
-            // Here you would typically send this 'data' to a server using fetch API.
-            // Example:
-            /*
-            fetch('/api/submit-feedback', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            })
-            .then(response => response.json())
-            .then(result => {
-                console.log('Success:', result);
-                // Display a success message to the user
-                alert('Thank you for your feedback!'); // Use a custom modal instead of alert in a real app
-                this.reset(); // Reset the form
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                // Display an error message to the user
-                alert('There was an error submitting your feedback.'); // Use a custom modal
-            });
-            */
-
-            // For now, let's just simulate a success message and reset the form
-            alert('Feedback submitted successfully! (This is a placeholder message)');
-            this.reset();
-        });
-
-        // WHERE TO WRITE: Add any other interactive JavaScript here,
-        // like dynamic content loading, animations, etc.
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
