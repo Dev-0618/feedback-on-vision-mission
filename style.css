@@ -13,33 +13,31 @@ body {
     font-family: var(--atria-font);
     background-color: var(--atria-light-grey);
     margin: 0;
-    padding: 0; /* Remove default body padding as header spans full width */
+    padding: 0;
     display: flex;
-    flex-direction: column; /* Arrange header and container vertically */
+    flex-direction: column;
     align-items: center; /* Center content horizontally */
     min-height: 100vh;
 }
 
 /* Header Styling - Mimics Atria Website */
 .atria-header {
-    width: 100%;
-    background-color: white; /* Main nav bar is white */
+    width: 100%; /* Ensures the header background spans full width */
+    background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.08);
     margin-bottom: 30px; /* Space between header and form container */
 }
 
+/* Top Bar - Content will now stretch to 100% of header width unless a max-width is applied */
 .top-bar {
-    background-color: var(--atria-dark-blue); /* Dark blue background */
+    background-color: var(--atria-dark-blue);
     color: white;
-    padding: 8px 0;
+    padding: 8px 20px; /* Added horizontal padding */
     font-size: 13px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Adjust to match Atria's content width */
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* Removed max-width and margin: auto; to allow full width stretch */
 }
 
 .top-bar .contact-info span {
@@ -48,7 +46,7 @@ body {
 
 .top-bar .contact-info i {
     margin-right: 5px;
-    color: var(--atria-red-accent); /* Small accent for icons */
+    color: var(--atria-red-accent);
 }
 
 .top-bar .quick-links a {
@@ -62,17 +60,17 @@ body {
     color: var(--atria-red-accent);
 }
 
+/* Main Navbar - Content will now stretch to 100% of header width unless a max-width is applied */
 .main-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    max-width: 1200px; /* Match top-bar width */
-    margin: 0 auto;
+    padding: 15px 20px; /* Added horizontal padding */
+    /* Removed max-width and margin: auto; to allow full width stretch */
 }
 
 .logo img {
-    height: 50px; /* Adjust logo height as needed */
+    height: 50px;
 }
 
 .main-navbar nav ul {
@@ -115,24 +113,24 @@ body {
     color: var(--atria-red-accent);
 }
 
-
 /* Main Container for the form */
 .container {
     background-color: #ffffff;
     padding: 30px 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     width: 100%;
     max-width: 900px;
     box-sizing: border-box;
-    color: var(--atria-text-color); /* Apply primary text color */
+    color: var(--atria-text-color);
 }
 
 h1 {
-    color: var(--atria-dark-blue); /* Heading color from Atria theme */
+    color: var(--atria-dark-blue);
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 10px;
+    text-align: center; /* Center the greeting */
 }
 
 p {
@@ -142,10 +140,10 @@ p {
     font-size: 15px;
 }
 
-.question {
+.question-text {
     font-size: 16px;
     font-weight: 600;
-    color: var(--atria-dark-blue); /* Make questions more prominent */
+    color: var(--atria-dark-blue);
     margin-bottom: 15px;
 }
 
@@ -156,16 +154,27 @@ p {
 label {
     display: block;
     margin-bottom: 8px;
-    font-weight: 600; /* Slightly bolder labels */
+    font-weight: 600;
     color: var(--atria-text-color);
     font-size: 15px;
 }
 
+/* Style for required fields indicator */
+label[for]:after,
+.question-text:after {
+    content: '*';
+    color: #ef4444; /* Red for required fields */
+    margin-left: 0.25rem;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
 select,
 textarea {
     width: 100%;
     padding: 10px 12px;
-    border: 1px solid var(--atria-border-color); /* Lighter border */
+    border: 1px solid var(--atria-border-color);
     border-radius: 4px;
     font-size: 15px;
     font-family: var(--atria-font);
@@ -185,18 +194,26 @@ select {
     padding-right: 30px;
 }
 
-
 .vision-mission-display {
-    background-color: #f9f9f9; /* Retain light background */
+    background-color: #f9f9f9;
     border: 1px solid var(--atria-border-color);
     padding: 20px;
     border-radius: 6px;
     margin-bottom: 30px;
 }
 
-.vision-mission-display p {
+.vision-mission-display h3,
+.vision-mission-display h2 {
+    color: var(--atria-dark-blue);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.vision-mission-display p,
+.vision-mission-display li {
     margin-bottom: 10px;
-    font-size: 14.5px; /* Slightly smaller for vision/mission text */
+    font-size: 14.5px;
     color: var(--atria-text-color);
 }
 
@@ -204,10 +221,16 @@ select {
     margin-bottom: 0;
 }
 
+.vision-mission-display ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+
 .radio-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px; /* Slightly more space */
+    gap: 25px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -237,7 +260,7 @@ select {
 }
 
 .radio-group input[type="radio"]:checked {
-    border-color: var(--atria-red-accent); /* Atria red accent for checked state */
+    border-color: var(--atria-red-accent);
     background-color: var(--atria-red-accent);
 }
 
@@ -251,9 +274,8 @@ select {
     margin: 3px;
 }
 
-
 button[type="submit"] {
-    background-color: var(--atria-red-accent); /* Red accent for submit button */
+    background-color: var(--atria-red-accent);
     color: white;
     padding: 12px 30px;
     border: none;
@@ -264,11 +286,11 @@ button[type="submit"] {
     transition: background-color 0.3s ease;
     width: auto;
     display: block;
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
 }
 
 button[type="submit"]:hover {
-    background-color: #b31f24; /* A slightly darker red on hover */
+    background-color: #b31f24;
 }
 
 /* Responsive adjustments */
@@ -317,7 +339,7 @@ button[type="submit"]:hover {
         font-size: 24px;
     }
 
-    p, label, .question {
+    p, label, .question-text {
         font-size: 14px;
     }
 
