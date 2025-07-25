@@ -7,6 +7,9 @@
     --atria-light-grey: #f4f7f6; /* Body background */
     --atria-border-color: #ddd; /* Lighter border for inputs */
     --atria-font: 'Montserrat', Arial, sans-serif;
+    --atria-footer-dark-bg: #1a1a1a; /* Dark background for the main footer section */
+    --atria-footer-light-text: #cccccc; /* Light text color for footer content */
+    --atria-footer-bottom-bg: #000; /* Even darker background for the very bottom bar */
 }
 
 body {
@@ -18,6 +21,7 @@ body {
     flex-direction: column;
     align-items: center; /* Center content horizontally */
     min-height: 100vh;
+    color: var(--atria-text-color); /* Default text color for body */
 }
 
 /* Header Styling - Mimics Atria Website */
@@ -26,6 +30,8 @@ body {
     background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.08);
     margin-bottom: 30px; /* Space between header and form container */
+    z-index: 1000; /* Ensure header is on top */
+    position: relative; /* For z-index to work */
 }
 
 /* Top Bar - Content will now stretch to 100% of header width unless a max-width is applied */
@@ -37,7 +43,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Removed max-width and margin: auto; to allow full width stretch */
 }
 
 .top-bar .contact-info span {
@@ -66,7 +71,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px; /* Added horizontal padding */
-    /* Removed max-width and margin: auto; to allow full width stretch */
 }
 
 .logo img {
@@ -120,9 +124,9 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     width: 100%;
-    max-width: 900px;
+    max-width: 900px; /* Maintain max-width for the form content */
     box-sizing: border-box;
-    color: var(--atria-text-color);
+    margin-bottom: 30px; /* Space before the footer */
 }
 
 h1 {
@@ -131,6 +135,16 @@ h1 {
     font-weight: 700;
     margin-bottom: 10px;
     text-align: center; /* Center the greeting */
+}
+
+h2 {
+    color: var(--atria-dark-blue);
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--atria-red-accent);
+    padding-bottom: 5px;
 }
 
 p {
@@ -202,13 +216,23 @@ select {
     margin-bottom: 30px;
 }
 
-.vision-mission-display h3,
-.vision-mission-display h2 {
+.vision-mission-display h3 {
     color: var(--atria-dark-blue);
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 15px;
 }
+
+.vision-mission-display h2 { /* Targeting h2 specifically within this display block */
+    color: var(--atria-dark-blue);
+    font-size: 20px; /* Slightly smaller than main h2 */
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: none; /* No border for inner h2 */
+    padding-bottom: 0;
+}
+
 
 .vision-mission-display p,
 .vision-mission-display li {
@@ -293,7 +317,248 @@ button[type="submit"]:hover {
     background-color: #b31f24;
 }
 
-/* Responsive adjustments */
+
+/* --- Footer Styling --- */
+footer {
+    width: 100%;
+    background-color: #ededed;
+    color: var(--atria-footer-light-text);
+    padding-top: 40px;
+    position: relative; /* For the admission sidebar */
+    box-sizing: border-box;
+}
+
+.footer-main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px; /* Match header content width if preferred, or remove for full stretch */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px 30px; /* Padding for the main content area */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+}
+
+.footer-column {
+    flex: 1; /* Distribute space evenly */
+    min-width: 200px; /* Minimum width before wrapping */
+    margin-bottom: 20px;
+    padding: 0 10px; /* Inner padding for columns */
+}
+
+.footer-column:first-child { /* About Atria column, can take more space */
+    flex: 1.5;
+    min-width: 280px;
+}
+
+.footer-column h3 {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--atria-red-accent);
+}
+
+.footer-column p,
+.footer-column address {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color:#000;
+}
+
+.footer-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.footer-column ul li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.footer-column.contact-info p i,
+.footer-column.contact-info address i {
+    margin-right: 10px;
+    color: var(--atria-red-accent);
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgb(3, 3, 3);
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--atria-red-accent);
+    color: white;
+}
+
+/* Admission Enquiry Sidebar */
+.admission-enquiry-sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg); /* Rotate for vertical display */
+    transform-origin: 100% 100%; /* Pivot point for rotation */
+    background-color: var(--atria-red-accent);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners when rotated */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure it stays on top */
+    white-space: nowrap; /* Prevent text wrapping */
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+}
+
+.admission-enquiry-sidebar:hover {
+    background-color: #b31f24;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom-bar {
+    background-color: var(--atria-footer-bottom-bg);
+    color: var(--atria-footer-light-text);
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom-bar .copyright {
+    flex-basis: 70%; /* Adjust as needed */
+    text-align: left;
+}
+
+.footer-bottom-bar .copyright a {
+    color: var(--atria-footer-light-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-bottom-bar .copyright a:hover {
+    color: white;
+}
+
+.footer-bottom-bar .affiliations {
+    flex-basis: 30%; /* Adjust as needed */
+    text-align: right;
+}
+
+.footer-bottom-bar .affiliations a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.footer-bottom-bar .affiliations a:hover {
+    color: var(--atria-red-accent);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .footer-main-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px 20px;
+    }
+
+    .footer-column {
+        min-width: unset; /* Remove min-width for stacking */
+        width: 100%; /* Each column takes full width */
+        max-width: 400px; /* Constrain content width */
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    .footer-column:first-child {
+        flex: unset;
+        min-width: unset;
+    }
+
+    .footer-column h3 {
+        text-align: center;
+    }
+
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%); /* Center the underline */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social icons */
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .footer-bottom-bar .copyright,
+    .footer-bottom-bar .affiliations {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .footer-bottom-bar .affiliations {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
 @media (max-width: 768px) {
     .atria-header {
         margin-bottom: 20px;
@@ -339,7 +604,13 @@ button[type="submit"]:hover {
         font-size: 24px;
     }
 
-    p, label, .question-text {
+    h2 {
+        font-size: 20px;
+    }
+
+    p, label, .question-text,
+    .vision-mission-display p,
+    .vision-mission-display li {
         font-size: 14px;
     }
 
@@ -352,5 +623,35 @@ button[type="submit"]:hover {
         width: 100%;
         font-size: 16px;
         padding: 10px;
+    }
+
+    /* Footer adjustments for smaller screens */
+    .footer-main-content {
+        padding: 0 15px 20px;
+    }
+
+    .footer-column {
+        margin-bottom: 25px;
+    }
+
+    .admission-enquiry-sidebar {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .footer-bottom-bar .affiliations a {
+        margin: 0 8px; /* Reduce space between affiliation links */
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar .contact-info span {
+        margin-right: 10px;
+    }
+    .top-bar .quick-links a {
+        margin-left: 10px;
+    }
+    .footer-bottom-bar .affiliations {
+        margin-top: 10px; /* Add more space when links wrap to new line */
     }
 }
