@@ -7,9 +7,9 @@
     <link href="https://cdn.tailwindcss.com" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased">
+<body>
     <header class="atria-header">
         <div class="top-bar">
             <div class="contact-info">
@@ -27,7 +27,9 @@
         </div>
         <div class="main-navbar">
             <div class="logo">
-                <img src="https://atria.edu/_next/static/media/Atria-logo.f721d879.png" alt="Atria Logo">
+                 <img src="https://atria.edu/_next/static/media/Atria-logo.f721d879.png" alt="Atria Logo">
+                 <img src="https://atria.edu/_next/static/media/naac.7d1adb90.png" alt="Logo 1" class="additional-logo">
+                 <img src="https://atria.edu/_next/static/media/25-years.7b1e3f73.png" alt="Logo 2" class="additional-logo">
             </div>
             <nav>
                 <ul>
@@ -255,6 +257,19 @@
             </div>
 
             <div class="form-group">
+                <label for="selectDepartment">Select Department</label>
+                <select id="selectDepartment" name="XYXYXYX" required>
+                    <option value="">Select Department</option>
+                    <option value="cse">Computer Science Engineering</option>
+                    <option value="ece">Electronics and Communication Engineering</option>
+                    <option value="eee">Electrical and Electronics Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="mech">Mechanical Engineering</option>
+                    <option value="other">Other</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
                 <button type="submit">
                     SUBMIT
                 </button>
@@ -262,6 +277,82 @@
         </form>
     </div>
 
-<script src="script.js"></script>
+    <footer>
+        <div class="footer-main-content">
+            <div class="footer-column about-atria">
+                <h3>About Atria</h3>
+                <p>Spacious 17.5 acre campus with ample trees and greenery in the heart of the silicon city of India- Bangalore. Bangalore City, Cantonment and Yeswanthpur Railway Stations and Central Bus Station are within a 7-kilometer radius of the college.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>ABOUT US</h3>
+                <ul>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Group Info</a></li>
+                    <li><a href="#">Vision & Mission</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Campus</h3>
+                <ul>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Hostel</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Culturals</a></li>
+                    <li><a href="#">Clubs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Mandatory Disclosures</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Placements</a></li>
+                    <li><a href="#">NAAC</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Research</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone-alt"></i> +91 7093029032</p>
+                <p><i class="fas fa-phone-alt"></i> +91 9666247700</p>
+                <p><i class="fas fa-envelope"></i> admissions@atria.edu</p>
+                <address>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Atria Institute of Technology, Anand Nagar, Hebbal, Bengaluru - 560 024
+                </address>
+            </div>
+        </div>
+
+        <a href="#" class="admission-enquiry-sidebar">
+            ADMISSION ENQUIRY
+        </a>
+
+        <div class="footer-bottom-bar">
+            <div class="copyright">
+                &copy; 2025 Atria Institute of Technology | Powered by: <a href="#">Step in Technologies.</a>
+            </div>
+            <div class="affiliations">
+                <a href="#">NBA</a>
+                <a href="#">NAAC</a>
+                <a href="#">AICTE</a>
+                <a href="#">VTU</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
