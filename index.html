@@ -4,355 +4,574 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atria - Vision & Mission Feedback</title>
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom CSS for basic font and body styling, overriding Tailwind defaults if needed */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            color: #333; /* Default text color */
+        }
+        /* Ensure images are responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Custom styling for radio buttons to improve appearance */
+        .radio-group input[type="radio"] {
+            margin-right: 0.5rem;
+            accent-color: #004d99; /* Atria blue */
+        }
+        /* Style for required fields indicator */
+        .form-group label[for]:after,
+        .question:after {
+            content: '*';
+            color: #ef4444; /* Red for required fields */
+            margin-left: 0.25rem;
+        }
+        /* Ensure dynamic fields are hidden by default */
+        .stakeholder-specific-fields {
+            display: none;
+        }
+    </style>
 </head>
-<body>
-    <header class="atria-header">
-        <div class="top-bar">
-            <div class="contact-info">
-                <span><i class="fas fa-phone"></i> +91 7093029032</span>
-                <span><i class="fas fa-envelope"></i> admissions@atria.edu</span>
+<body class="antialiased">
+    <header class="bg-white shadow-md">
+        <!-- Top Bar -->
+        <div class="bg-[#004d99] text-white text-sm py-2 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-wrap gap-x-4 gap-y-2 mb-2 md:mb-0">
+                <span><i class="fas fa-phone mr-1"></i> +91 7093029032</span>
+                <span><i class="fas fa-envelope mr-1"></i> admissions@atria.edu</span>
             </div>
-            <div class="quick-links">
-                <a href="#">Contact Us</a>
-                <a href="#">NAAC</a>
-                <a href="#">IQAC</a>
-                <a href="#">MBA</a>
-                <a href="#">Research</a>
-                <a href="#">Student Login</a>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+                <a href="#" class="hover:underline">Contact Us</a>
+                <a href="#" class="hover:underline">NAAC</a>
+                <a href="#" class="hover:underline">IQAC</a>
+                <a href="#" class="hover:underline">MBA</a>
+                <a href="#" class="hover:underline">Research</a>
+                <a href="#" class="hover:underline">Student Login</a>
             </div>
         </div>
-        <div class="main-navbar">
-            <div class="logo">
-                 <img src="https://atria.edu/_next/static/media/Atria-logo.f721d879.png" alt="Atria Logo">
-                 <img src="https://atria.edu/_next/static/media/naac.7d1adb90.png" alt="Logo 1" class="additional-logo">
-                 <img src="https://atria.edu/_next/static/media/25-years.7b1e3f73.png" alt="Logo 2" class="additional-logo">
+        <!-- Main Navbar -->
+        <div class="flex flex-col md:flex-row justify-between items-center py-4 px-4 md:px-8">
+            <div class="logo mb-4 md:mb-0">
+                <img src="https://atria.edu/_next/static/media/Atria-logo.f721d879.png" alt="Atria Logo" class="h-12">
             </div>
             <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Academics</a></li>
-                    <li><a href="#">Admissions</a></li>
-                    <li><a href="#">Campus Life</a></li>
-                    </ul>
+                <ul class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-lg font-semibold">
+                    <li><a href="#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Home</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">About Us</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Academics</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Admissions</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Campus Life</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <div class="container">
-        <h1>Dear Stakeholder,</h1>
-        <p>Greetings! Kindly submit the College and Department Vision-Mission feedback.</p>
-        <p>
-            The Vision and Mission statements are proposed to be updated for the academic year 2025-26 in alignment with the National Education Policy (NEP), the institute's Autonomous status, and evolving industrial expectations. The revision also aims to promote and inculcate innovation and incubation culture in academics and research. We kindly request you to share your valuable suggestions and feedback on the proposed Vision and Mission statements.
-        </p>
+    <div class="container mx-auto p-4 md:p-8 bg-white shadow-lg rounded-lg mt-8 mb-8 max-w-3xl">
+        <h1 class="text-3xl font-bold text-center mb-4 text-[#004d99]">Dear Stakeholder,</h1>
+        <p class="text-center text-lg mb-6">Greetings! Kindly submit the College Vision-Mission feedback.</p>
 
-        <form id="feedbackForm" action="https://xyxyxyx.com" method="POST">
-            <div class="form-group">
-                <label for="fullName">Name</label>
-                <input type="text" id="fullName" name="XYXYXYX" required>
-            </div>
-            <div class="form-group">
-                <label for="phoneNo">Phone No.</label>
-                <input type="tel" id="phoneNo" name="XYXYXYX" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="XYXYXYX" required>
+        <form id="feedbackForm" action="YOUR_GOOGLE_FORM_RESPONSE_URL_HERE" method="POST" class="space-y-8">
+            <!-- Institute New Initiatives Section -->
+            <div class="new-initiatives-display bg-green-50 p-6 rounded-lg border border-green-200">
+                <h2 class="text-xl font-bold text-green-800 mb-3">Institute New Initiatives</h2>
+                <p class="text-gray-700 mb-2">Atria is constantly evolving to provide the best educational experience. Our new initiatives include:</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>Implementing AI-powered personalized learning paths for students.</li>
+                    <li>Establishing a dedicated incubation center for student startups.</li>
+                    <li>Launching new interdisciplinary research programs focusing on sustainable technologies.</li>
+                    <li>Enhancing industry partnerships for more robust internship and placement opportunities.</li>
+                    <li>Introducing a mentorship program connecting students with alumni and industry leaders.</li>
+                </ul>
+                <p class="text-gray-600 mt-3 text-sm">We welcome your feedback on these and future initiatives!</p>
             </div>
 
+            <!-- Stake Holder Type -->
             <div class="form-group">
-                <label for="stakeHolderType">Stake Holder Type</label>
-                <select id="stakeHolderType" name="XYXYXYX" required>
+                <label for="stakeHolderType" class="block text-gray-700 text-sm font-bold mb-2">Stake Holder Type</label>
+                <select id="stakeHolderType" name="entry.STAKEHOLDER_TYPE_ID" required
+                        class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent">
                     <option value="">Select</option>
                     <option value="Student">Student</option>
                     <option value="Alumni">Alumni</option>
                     <option value="Parent">Parent</option>
-                    <option value="Faculty and Staff">Faculty and Staff (Atria IT)</option>
+                    <option value="Faculty and Staff">Faculty and Staff</option>
                     <option value="Employer">Employer</option>
                     <option value="Entrepreneur">Entrepreneur</option>
                     <option value="Other">Other</option>
                 </select>
             </div>
 
-            <div id="studentFields" class="stakeholder-specific-fields" style="display:none;">
+            <!-- DYNAMIC FIELDS BASED ON STAKEHOLDER TYPE -->
+
+            <!-- Student Specific Fields -->
+            <div id="studentFields" class="stakeholder-specific-fields space-y-6">
+                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Student Details</h3>
                 <div class="form-group">
-                    <label for="studentRollNo">Roll No.</label>
-                    <input type="text" id="studentRollNo" name="XYXYXYX">
+                    <label for="studentName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="studentName" name="entry.STUDENT_NAME_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Full Name">
                 </div>
                 <div class="form-group">
-                    <label for="studentBranch">Branch</label>
-                    <input type="text" id="studentBranch" name="XYXYXYX">
+                    <label for="studentEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="studentEmail" name="entry.STUDENT_EMAIL_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="your.email@example.com">
                 </div>
                 <div class="form-group">
-                    <label for="studentYear">Year</label>
-                    <input type="text" id="studentYear" name="XYXYXYX">
+                    <label for="studentPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                    <input type="tel" id="studentPhone" name="entry.STUDENT_PHONE_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., +91 9876543210">
+                </div>
+                <div class="form-group">
+                    <label for="studentId" class="block text-gray-700 text-sm font-bold mb-2">Student ID</label>
+                    <input type="text" id="studentId" name="entry.STUDENT_ID_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Student ID">
+                </div>
+                <div class="form-group">
+                    <label for="studentProgram" class="block text-gray-700 text-sm font-bold mb-2">Program/Course</label>
+                    <input type="text" id="studentProgram" name="entry.STUDENT_PROGRAM_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., B.Tech CSE">
                 </div>
             </div>
 
-            <div id="alumniFields" class="stakeholder-specific-fields" style="display:none;">
+            <!-- Alumni Specific Fields -->
+            <div id="alumniFields" class="stakeholder-specific-fields space-y-6">
+                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Alumni Details</h3>
                 <div class="form-group">
-                    <label for="alumniBranch">Branch</label>
-                    <input type="text" id="alumniBranch" name="XYXYXYX">
-                </div>
-                <div class="form-group">
-                    <label for="alumniYearPassedOut">Year of Passed Out</label>
-                    <input type="text" id="alumniYearPassedOut" name="XYXYXYX">
-                </div>
-                <div class="form-group">
-                    <label for="alumniPresentAddress">Present Address</label>
-                    <textarea id="alumniPresentAddress" name="XYXYXYX" rows="3"></textarea>
+                    <label for="alumniName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="alumniName" name="entry.ALUMNI_NAME_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Full Name">
                 </div>
                 <div class="form-group">
-                    <label for="alumniPresentPositionAddress">Present Position & Address</label>
-                    <textarea id="alumniPresentPositionAddress" name="XYXYXYX" rows="3"></textarea>
-                </div>
-            </div>
-
-            <div id="parentFields" class="stakeholder-specific-fields" style="display:none;">
-                <div class="form-group">
-                    <label for="parentStudentName">Name of the Student</label>
-                    <input type="text" id="parentStudentName" name="XYXYXYX">
+                    <label for="alumniEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="alumniEmail" name="entry.ALUMNI_EMAIL_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="your.email@example.com">
                 </div>
                 <div class="form-group">
-                    <label for="parentStudentBranch">Student's Branch</label>
-                    <input type="text" id="parentStudentBranch" name="XYXYXYX">
+                    <label for="alumniPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                    <input type="tel" id="alumniPhone" name="entry.ALUMNI_PHONE_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., +91 9876543210">
                 </div>
                 <div class="form-group">
-                    <label for="parentPresentAddress">Present Address</label>
-                    <textarea id="parentPresentAddress" name="XYXYXYX" rows="3"></textarea>
-                </div>
-            </div>
-
-            <div id="facultyStaffFields" class="stakeholder-specific-fields" style="display:none;">
-                <div class="form-group">
-                    <label for="facultyBranchDept">Branch/Department</label>
-                    <input type="text" id="facultyBranchDept" name="XYXYXYX">
+                    <label for="alumniGradYear" class="block text-gray-700 text-sm font-bold mb-2">Graduation Year</label>
+                    <input type="number" id="alumniGradYear" name="entry.ALUMNI_GRAD_YEAR_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., 2020">
                 </div>
                 <div class="form-group">
-                    <label for="facultyDesignation">Designation</label>
-                    <input type="text" id="facultyDesignation" name="XYXYXYX">
+                    <label for="alumniOccupation" class="block text-gray-700 text-sm font-bold mb-2">Current Occupation</label>
+                    <input type="text" id="alumniOccupation" name="entry.ALUMNI_OCCUPATION_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., Software Engineer">
                 </div>
             </div>
 
-            <div id="employerFields" class="stakeholder-specific-fields" style="display:none;">
+            <!-- Parent Specific Fields -->
+            <div id="parentFields" class="stakeholder-specific-fields space-y-6">
+                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Parent Details</h3>
                 <div class="form-group">
-                    <label for="employerCompanyName">Company Name</label>
-                    <input type="text" id="employerCompanyName" name="XYXYXYX">
-                </div>
-                <div class="form-group">
-                    <label for="employerCompanyAffiliation">Company Affiliation</label>
-                    <input type="text" id="employerCompanyAffiliation" name="XYXYXYX">
-                </div>
-            </div>
-
-            <div id="entrepreneurFields" class="stakeholder-specific-fields" style="display:none;">
-                <div class="form-group">
-                    <label for="entrepreneurCompanyName">Company Name</label>
-                    <input type="text" id="entrepreneurCompanyName" name="XYXYXYX">
+                    <label for="parentName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="parentName" name="entry.PARENT_NAME_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Full Name">
                 </div>
                 <div class="form-group">
-                    <label for="entrepreneurDesignation">Designation</label>
-                    <input type="text" id="entrepreneurDesignation" name="XYXYXYX">
+                    <label for="parentEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="parentEmail" name="entry.PARENT_EMAIL_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="your.email@example.com">
                 </div>
                 <div class="form-group">
-                    <label for="entrepreneurSpecialization">Specialization</label>
-                    <input type="text" id="entrepreneurSpecialization" name="XYXYXYX">
+                    <label for="parentPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                    <input type="tel" id="parentPhone" name="entry.PARENT_PHONE_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., +91 9876543210">
                 </div>
                 <div class="form-group">
-                    <label for="entrepreneurContactAddress">Contact Address</label>
-                    <textarea id="entrepreneurContactAddress" name="XYXYXYX" rows="3"></textarea>
+                    <label for="childName" class="block text-gray-700 text-sm font-bold mb-2">Child's Name</label>
+                    <input type="text" id="childName" name="entry.CHILD_NAME_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Name of your child studying here">
+                </div>
+                <div class="form-group">
+                    <label for="childProgram" class="block text-gray-700 text-sm font-bold mb-2">Child's Program/Course</label>
+                    <input type="text" id="childProgram" name="entry.CHILD_PROGRAM_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., B.Tech ECE">
                 </div>
             </div>
 
-            <div class="vision-mission-display">
-                <h3>Institute's New Initiatives:</h3>
-                <ul>
-                    <li>Implementation of an Autonomous and Industry-Relevant Curriculum</li>
-                    <li>Adoption of Activity-Based Assignments and Assessments</li>
-                    <li>Establishment of Nine Centers of Excellence in collaboration with industry and academia</li>
-                    <li>Formation of Eleven Student Technical Clubs to foster multidisciplinary technical skills</li>
-                    <li>Functioning of Ten Active Professional Clubs for professional growth and networking</li>
-                    <li>Recognition of Ten Research Centers focused on cutting-edge innovations Promotion of Socially Relevant, Project-Based Learning throughout the students' academic journey at Atria, aligned with Sustainable Development Goals (SDGs)</li>
-                </ul>
-            </div>
-
-            <div class="vision-mission-display">
-                <h2>Proposed Vision & Mission Statements:</h2>
-                <p><strong>Vision:</strong> To be a pioneering institution empowering learner through creative problem-solving, sustainability-focused ethical education, and a vibrant culture of interdisciplinary research, innovation, and entrepreneurship for societal advancement.</p>
-                <p><strong>Mission 1 (M1):</strong> Foster a dynamic learning environment and pedagogy that encourages creative problem-solving through innovative tools and techniques.</p>
-                <p><strong>Mission 2 (M2):</strong> Cultivate lifelong learning by engaging in eco-social problem solving aligned with sustainability goals, while nurturing ethical values and responsibility.</p>
-                <p><strong>Mission 3 (M3):</strong> To inculcate the culture of problem identification, research, innovation, and incubation by promoting strong networking with society, industry, academic institutions, and mentors, while ensuring the availability of necessary infrastructure and resources.</p>
-            </div>
-
-            <h2>Vision Feedback</h2>
-
-            <div class="form-group">
-                <p class="question-text">Does the Vision emphasize sustainability, entrepreneurship, and interdisciplinary collaboration as key drivers for societal advancement?</p>
-                <div class="radio-group">
-                    <label><input type="radio" name="XYXYXYX" value="Relevant to current societal and technological needs" required> Relevant to current societal and technological needs</label>
-                    <label><input type="radio" name="XYXYXYX" value="Somewhat relevant, but could be clearer"> Somewhat relevant, but could be clearer</label>
-                    <label><input type="radio" name="XYXYXYX" value="Not relevant to present or future societal demands"> Not relevant to present or future societal demands</label>
+            <!-- Faculty and Staff Specific Fields -->
+            <div id="facultyStaffFields" class="stakeholder-specific-fields space-y-6">
+                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Faculty/Staff Details</h3>
+                <div class="form-group">
+                    <label for="facultyName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="facultyName" name="entry.FACULTY_NAME_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="facultyEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="facultyEmail" name="entry.FACULTY_EMAIL_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="facultyPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                    <input type="tel" id="facultyPhone" name="entry.FACULTY_PHONE_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., +91 9876543210">
+                </div>
+                <div class="form-group">
+                    <label for="facultyDepartment" class="block text-gray-700 text-sm font-bold mb-2">Department</label>
+                    <input type="text" id="facultyDepartment" name="entry.FACULTY_DEPT_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Department">
+                </div>
+                <div class="form-group">
+                    <label for="facultyRole" class="block text-gray-700 text-sm font-bold mb-2">Role/Designation</label>
+                    <input type="text" id="facultyRole" name="entry.FACULTY_ROLE_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., Professor, Admin Staff">
                 </div>
             </div>
 
-            <div class="form-group">
-                <p class="question-text">Does the Vision Statement reflect the goal of delivering quality technical and management education aligned with national and international technological advancements?</p>
-                <div class="radio-group">
-                    <label><input type="radio" name="XYXYXYX" value="Relevant to current and emerging national and global technological trends" required> Relevant to current and emerging national and global technological trends</label>
-                    <label><input type="radio" name="XYXYXYX" value="Somewhat relevant, needs better alignment with global advancements"> Somewhat relevant, needs better alignment with global advancements</label>
-                    <label><input type="radio" name="XYXYXYX" value="Not relevant to present or future technological expectations"> Not relevant to present or future technological expectations</label>
+            <!-- Employer Specific Fields -->
+            <div id="employerFields" class="stakeholder-specific-fields space-y-6">
+                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Employer Details</h3>
+                <div class="form-group">
+                    <label for="employerName" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
+                    <input type="text" id="employerName" name="entry.EMPLOYER_NAME_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="employerEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="employerEmail" name="entry.EMPLOYER_EMAIL_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="employerPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                    <input type="tel" id="employerPhone" name="entry.EMPLOYER_PHONE_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., +91 9876543210">
+                </div>
+                <div class="form-group">
+                    <label for="companyName" class="block text-gray-700 text-sm font-bold mb-2">Company Name</label>
+                    <input type="text" id="companyName" name="entry.COMPANY_NAME_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Company's Name">
+                </div>
+                <div class="form-group">
+                    <label for="industryType" class="block text-gray-700 text-sm font-bold mb-2">Industry Type</label>
+                    <input type="text" id="industryType" name="entry.INDUSTRY_TYPE_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., IT, Manufacturing">
                 </div>
             </div>
 
-            <div class="form-group">
-                <p class="question-text">Does the institution's current progress reflect alignment with its Vision and the future aspirations of both the institution and its stakeholders over the next 5-10 years?</p>
-                <div class="radio-group">
-                    <label><input type="radio" name="XYXYXYX" value="Relevant to the institution's long-term goals and stakeholder expectations" required> Relevant to the institution's long-term goals and stakeholder expectations</label>
-                    <label><input type="radio" name="XYXYXYX" value="Partially relevant, some gaps in alignment need to be addressed"> Partially relevant, some gaps in alignment need to be addressed</label>
-                    <label><input type="radio" name="XYXYXYX" value="Not relevant to the envisioned future direction"> Not relevant to the envisioned future direction</label>
+            <!-- Entrepreneur Specific Fields -->
+            <div id="entrepreneurFields" class="stakeholder-specific-fields space-y-6">
+                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Entrepreneur Details</h3>
+                <div class="form-group">
+                    <label for="entrepreneurName" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
+                    <input type="text" id="entrepreneurName" name="entry.ENTREPRENEUR_NAME_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="entrepreneurEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="entrepreneurEmail" name="entry.ENTREPRENEUR_EMAIL_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="entrepreneurPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                    <input type="tel" id="entrepreneurPhone" name="entry.ENTREPRENEUR_PHONE_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., +91 9876543210">
+                </div>
+                <div class="form-group">
+                    <label for="startupName" class="block text-gray-700 text-sm font-bold mb-2">Startup Name</label>
+                    <input type="text" id="startupName" name="entry.STARTUP_NAME_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Startup's Name">
+                </div>
+                <div class="form-group">
+                    <label for="startupIndustry" class="block text-gray-700 text-sm font-bold mb-2">Startup Industry</label>
+                    <input type="text" id="startupIndustry" name="entry.STARTUP_INDUSTRY_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., Tech, Retail">
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="visionSuggestion">Suggestion : What would you like to add or remove in the above statement?</label>
-                <textarea id="visionSuggestion" name="XYXYXYX" rows="5"></textarea>
-            </div>
-
-            <h2>Mission Feedback</h2>
-
-            <div class="form-group">
-                <p class="question-text">Is the mission of building strong networks with society, industry, and academia, along with providing necessary infrastructure, on the right path toward fulfilling the institution's Vision?</p>
-                <div class="radio-group">
-                    <label><input type="radio" name="XYXYXYX" value="Yes, clearly on the right path" required> Yes, clearly on the right path</label>
-                    <label><input type="radio" name="XYXYXYX" value="Somewhat aligned, needs strengthening"> Somewhat aligned, needs strengthening</label>
-                    <label><input type="radio" name="XYXYXYX" value="Not aligned, needs revision"> Not aligned, needs revision</label>
+            <!-- Other Specific Fields -->
+            <div id="otherFields" class="stakeholder-specific-fields space-y-6">
+                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Other Stakeholder Details</h3>
+                <div class="form-group">
+                    <label for="otherName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="otherName" name="entry.OTHER_NAME_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="otherEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="otherEmail" name="entry.OTHER_EMAIL_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="otherPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                    <input type="tel" id="otherPhone" name="entry.OTHER_PHONE_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., +91 9876543210">
+                </div>
+                <div class="form-group">
+                    <label for="otherSpecify" class="block text-gray-700 text-sm font-bold mb-2">Please Specify Your Role</label>
+                    <input type="text" id="otherSpecify" name="entry.OTHER_SPECIFY_ID"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., Community Member, Vendor">
                 </div>
             </div>
 
-            <div class="form-group">
-                <p class="question-text">Is the focus on lifelong learning and solving eco-social problems aligned with the Vision of societal advancement?</p>
-                <div class="radio-group">
-                    <label><input type="radio" name="XYXYXYX" value="Relevant to long-term Vision and values" required> Relevant to long-term Vision and values</label>
-                    <label><input type="radio" name="XYXYXYX" value="Somewhat relevant, can be improved"> Somewhat relevant, can be improved</label>
-                    <label><input type="radio" name="XYXYXYX" value="Not relevant, should be revised"> Not relevant, should be revised</label>
+            <!-- College Vision Section -->
+            <div class="vision-section bg-blue-50 p-6 rounded-lg border border-blue-200">
+                <h2 class="text-xl font-bold text-[#004d99] mb-3">College Vision</h2>
+                <p class="mb-6 text-gray-700">To emerge as a premier Technical Institution in the field of engineering and research with a focus to produce professionally competent and socially sensitive engineers capable of working in a multidisciplinary global environment.</p>
+
+                <!-- Vision Feedback Question 1 -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Do you think our vision statement captures where we are heading as an Organization to produce competent engineers?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q1_ID" value="Strongly Agree" required class="form-radio"> Strongly Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q1_ID" value="Agree" class="form-radio"> Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q1_ID" value="Neutral" class="form-radio"> Neutral
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q1_ID" value="Disagree" class="form-radio"> Disagree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q1_ID" value="Strongly Disagree" class="form-radio"> Strongly Disagree
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Vision Feedback Question 2 (Example) -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Is the vision statement clear, concise, and inspiring?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q2_ID" value="Strongly Agree" required class="form-radio"> Strongly Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q2_ID" value="Agree" class="form-radio"> Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q2_ID" value="Neutral" class="form-radio"> Neutral
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q2_ID" value="Disagree" class="form-radio"> Disagree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q2_ID" value="Strongly Disagree" class="form-radio"> Strongly Disagree
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Vision Feedback Question 3 (Example) -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Does the vision statement align with the current and future needs of the industry and society?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q3_ID" value="Strongly Agree" required class="form-radio"> Strongly Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q3_ID" value="Agree" class="form-radio"> Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q3_ID" value="Neutral" class="form-radio"> Neutral
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q3_ID" value="Disagree" class="form-radio"> Disagree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.VISION_Q3_ID" value="Strongly Disagree" class="form-radio"> Strongly Disagree
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Vision Suggestions -->
+                <div class="form-group">
+                    <label for="visionSuggestion" class="block text-gray-700 text-sm font-bold mb-2">Suggestions</label>
+                    <textarea id="visionSuggestion" name="entry.VISION_SUGGESTION_ID" rows="5"
+                              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent resize-y"
+                              placeholder="Enter your suggestions here..."></textarea>
                 </div>
             </div>
 
-            <div class="form-group">
-                <p class="question-text">Is the mission of encouraging research, innovation, and collaboration with society and industry a suitable path to reach the institutional Vision?</p>
-                <div class="radio-group">
-                    <label><input type="radio" name="XYXYXYX" value="Relevant to the Vision and future goals" required> Relevant to the Vision and future goals</label>
-                    <label><input type="radio" name="XYXYXYX" value="Somewhat relevant, needs better alignment"> Somewhat relevant, needs better alignment</label>
-                    <label><input type="radio" name="XYXYXYX" value="Not relevant, needs significant changes"> Not relevant, needs significant changes</label>
+            <!-- College Mission Section -->
+            <div class="mission-section bg-purple-50 p-6 rounded-lg border border-purple-200">
+                <h2 class="text-xl font-bold text-[#004d99] mb-3">College Mission</h2>
+                <p class="mb-6 text-gray-700">To provide high quality technical education through a creative balance of academia and industry by adopting highly effective teaching learning processes<br>To promote multidisciplinary research with a global perspective to attain professional excellence<br>To establish standards that inculcate ethical and moral values that contribute to growth in the Career and development of society.</p>
+
+                <!-- Mission Feedback Question 1 -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Does our mission statement reflect our fundamental and unique purpose?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q1_ID" value="Strongly Agree" required class="form-radio"> Strongly Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q1_ID" value="Agree" class="form-radio"> Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q1_ID" value="Neutral" class="form-radio"> Neutral
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q1_ID" value="Disagree" class="form-radio"> Disagree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q1_ID" value="Strongly Disagree" class="form-radio"> Strongly Disagree
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Mission Feedback Question 2 (Example) -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Are the mission statements actionable and measurable?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q2_ID" value="Strongly Agree" required class="form-radio"> Strongly Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q2_ID" value="Agree" class="form-radio"> Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q2_ID" value="Neutral" class="form-radio"> Neutral
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q2_ID" value="Disagree" class="form-radio"> Disagree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q2_ID" value="Strongly Disagree" class="form-radio"> Strongly Disagree
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Mission Feedback Question 3 (Example) -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Do the mission statements clearly communicate the college's core activities and values?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q3_ID" value="Strongly Agree" required class="form-radio"> Strongly Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q3_ID" value="Agree" class="form-radio"> Agree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q3_ID" value="Neutral" class="form-radio"> Neutral
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q3_ID" value="Disagree" class="form-radio"> Disagree
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="entry.MISSION_Q3_ID" value="Strongly Disagree" class="form-radio"> Strongly Disagree
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Mission Suggestions -->
+                <div class="form-group">
+                    <label for="missionSuggestion" class="block text-gray-700 text-sm font-bold mb-2">Suggestions</label>
+                    <textarea id="missionSuggestion" name="entry.MISSION_SUGGESTION_ID" rows="5"
+                              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent resize-y"
+                              placeholder="Enter your suggestions here..."></textarea>
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="missionSuggestion">Suggestion : What would you like to add or remove in the above statement?</label>
-                <textarea id="missionSuggestion" name="XYXYXYX" rows="5"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="selectDepartment">Select Department</label>
-                <select id="selectDepartment" name="XYXYXYX" required>
-                    <option value="">Select Department</option>
-                    <option value="cse">Computer Science Engineering</option>
-                    <option value="ece">Electronics and Communication Engineering</option>
-                    <option value="eee">Electrical and Electronics Engineering</option>
-                    <option value="civil">Civil Engineering</option>
-                    <option value="mech">Mechanical Engineering</option>
-                    <option value="other">Other</option>
-                    </select>
-            </div>
-
-            <div class="form-group">
-                <button type="submit">
+            <!-- Submit Button -->
+            <div class="form-group text-center">
+                <button type="submit"
+                        class="bg-[#004d99] hover:bg-[#003366] text-white font-bold py-3 px-8 rounded-lg focus:outline-none focus:shadow-outline transition-colors duration-200 transform hover:scale-105">
                     SUBMIT
                 </button>
             </div>
         </form>
     </div>
 
-    <footer>
-        <div class="footer-main-content">
-            <div class="footer-column about-atria">
-                <h3>About Atria</h3>
-                <p>Spacious 17.5 acre campus with ample trees and greenery in the heart of the silicon city of India- Bangalore. Bangalore City, Cantonment and Yeswanthpur Railway Stations and Central Bus Station are within a 7-kilometer radius of the college.</p>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <footer class="bg-[#004d99] text-white py-8 px-4 md:px-8 mt-12">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start space-y-6 md:space-y-0">
+            <!-- Footer Logo and Tagline -->
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <img src="https://atria.edu/_next/static/media/Atria-logo.f721d879.png" alt="Atria Logo" class="h-16 mb-2 filter brightness-0 invert">
+                <p class="text-sm">Empowering Futures Through Excellence in Education</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold mb-3">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Admissions</a></li>
+                    <li><a href="#" class="hover:underline">Academics</a></li>
+                    <li><a href="#" class="hover:underline">Campus Life</a></li>
+                    <li><a href="#" class="hover:underline">Research</a></li>
+                    <li><a href="#" class="hover:underline">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold mb-3">Contact Us</h3>
+                <p class="text-sm">
+                    <i class="fas fa-map-marker-alt mr-2"></i> AG Block, G.K.V.K. Post, <br class="hidden md:inline">
+                    Bengaluru - 560064, Karnataka, India
+                </p>
+                <p class="text-sm mt-2">
+                    <i class="fas fa-phone mr-2"></i> +91 7093029032
+                </p>
+                <p class="text-sm mt-2">
+                    <i class="fas fa-envelope mr-2"></i> admissions@atria.edu
+                </p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold mb-3">Follow Us</h3>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#" class="text-white hover:text-gray-300 transition-colors duration-200"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300 transition-colors duration-200"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300 transition-colors duration-200"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300 transition-colors duration-200"><i class="fab fa-instagram text-xl"></i></a>
                 </div>
             </div>
-
-            <div class="footer-column">
-                <h3>ABOUT US</h3>
-                <ul>
-                    <li><a href="#">Leadership</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Group Info</a></li>
-                    <li><a href="#">Vision & Mission</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Campus</h3>
-                <ul>
-                    <li><a href="#">Library</a></li>
-                    <li><a href="#">Hostel</a></li>
-                    <li><a href="#">Sports</a></li>
-                    <li><a href="#">Culturals</a></li>
-                    <li><a href="#">Clubs</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Mandatory Disclosures</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Placements</a></li>
-                    <li><a href="#">NAAC</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                    <li><a href="#">Research</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column contact-info">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-phone-alt"></i> +91 7093029032</p>
-                <p><i class="fas fa-phone-alt"></i> +91 9666247700</p>
-                <p><i class="fas fa-envelope"></i> admissions@atria.edu</p>
-                <address>
-                    <i class="fas fa-map-marker-alt"></i>
-                    Atria Institute of Technology, Anand Nagar, Hebbal, Bengaluru - 560 024
-                </address>
-            </div>
         </div>
-
-        <a href="#" class="admission-enquiry-sidebar">
-            ADMISSION ENQUIRY
-        </a>
-
-        <div class="footer-bottom-bar">
-            <div class="copyright">
-                &copy; 2025 Atria Institute of Technology | Powered by: <a href="#">Step in Technologies.</a>
-            </div>
-            <div class="affiliations">
-                <a href="#">NBA</a>
-                <a href="#">NAAC</a>
-                <a href="#">AICTE</a>
-                <a href="#">VTU</a>
-            </div>
+        <div class="text-center text-sm mt-8 pt-6 border-t border-white border-opacity-20">
+            &copy; 2025 Atria Institute of Technology. All Rights Reserved.
         </div>
     </footer>
 
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
