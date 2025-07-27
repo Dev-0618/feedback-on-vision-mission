@@ -1,21 +1,58 @@
+// feedback-form-script.js
+
+// This script handles dynamic field visibility based on stakeholder type
+// and the form submission logic for the Atria Vision & Mission Feedback Form.
+
 document.addEventListener('DOMContentLoaded', function() {
     const stakeHolderTypeSelect = document.getElementById('stakeHolderType');
+    // Select all divs that contain stakeholder-specific fields
     const stakeholderSpecificFields = document.querySelectorAll('.stakeholder-specific-fields');
+    const feedbackForm = document.getElementById('feedbackForm');
+    const submitButton = feedbackForm ? feedbackForm.querySelector('button[type="submit"]') : null;
+
+    // --- Message Box Elements (Replacing alert/confirm) ---
+    // Create a simple message box dynamically
+    const messageBox = document.createElement('div');
+    messageBox.id = 'formMessageBox';
+    messageBox.className = 'fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 z-50 hidden';
+    messageBox.innerHTML = `
+        <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
+            <p id="messageBoxText" class="text-lg font-semibold mb-4"></p>
+            <button id="messageBoxClose" class="bg-[#004d99] hover:bg-[#003366] text-white font-bold py-2 px-4 rounded-lg">
+                OK
+            </button>
+        </div>
+    `;
+    document.body.appendChild(messageBox);
+
+    const messageBoxText = document.getElementById('messageBoxText');
+    const messageBoxClose = document.getElementById('messageBoxClose');
+
+    function showMessageBox(message) {
+        messageBoxText.textContent = message;
+        messageBox.classList.remove('hidden');
+    }
+
+    messageBoxClose.addEventListener('click', () => {
+        messageBox.classList.add('hidden');
+    });
+    // --- End Message Box Elements ---
+
 
     // Function to show/hide relevant fields based on selected stakeholder type
     function showHideFields() {
         const selectedType = stakeHolderTypeSelect.value;
 
-        // Hide all dynamic fields first
+        // First, hide all dynamic fields and remove their 'required' attribute
         stakeholderSpecificFields.forEach(function(fieldDiv) {
-            fieldDiv.style.display = 'none';
-            // Also make inputs within these hidden divs not required to allow submission
-            fieldDiv.querySelectorAll('input, select, textarea').forEach(input => {
+            fieldDiv.style.display = 'none'; // Hide the div
+            // Remove 'required' from all inputs within this hidden div
+            fieldDiv.querySelectorAll('input:not([type="radio"]), select, textarea').forEach(input => {
                 input.removeAttribute('required');
             });
         });
 
-        // Show the relevant dynamic fields and make their inputs required
+        // Now, show the relevant dynamic fields and make their inputs required
         let currentFieldsDiv = null;
         if (selectedType === 'Student') {
             currentFieldsDiv = document.getElementById('studentFields');
@@ -29,13 +66,14 @@ document.addEventListener('DOMContentLoaded', function() {
             currentFieldsDiv = document.getElementById('employerFields');
         } else if (selectedType === 'Entrepreneur') {
             currentFieldsDiv = document.getElementById('entrepreneurFields');
+        } else if (selectedType === 'Other') {
+            currentFieldsDiv = document.getElementById('otherFields');
         }
 
         if (currentFieldsDiv) {
-            currentFieldsDiv.style.display = 'block';
+            currentFieldsDiv.style.display = 'block'; // Show the div
             // Make inputs within the *currently visible* div required.
-            // You might need to adjust which fields are truly 'required' based on your actual data collection needs.
-            // For now, setting all text/select/textarea fields within the visible div as required.
+            // This ensures only fields relevant to the selected stakeholder are validated.
             currentFieldsDiv.querySelectorAll('input:not([type="radio"]), select, textarea').forEach(input => {
                 input.setAttribute('required', 'required');
             });
@@ -43,55 +81,77 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Attach the event listener to the stakeholder type dropdown
-    stakeHolderTypeSelect.addEventListener('change', showHideFields);
+    if (stakeHolderTypeSelect) {
+        stakeHolderTypeSelect.addEventListener('change', showHideFields);
+        // Call the function once on page load to set the initial state
+        showHideFields();
+    } else {
+        console.error('Stakeholder Type dropdown element not found. Please ensure id="stakeHolderType".');
+    }
 
-    // Call the function once on page load to set the initial state
-    showHideFields();
+    // Handle form submission to Google Apps Script
+    if (feedbackForm) {
+        feedbackForm.addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission (which would cause a redirect)
 
-    // Basic form submission handling (for demonstration, replace with actual GForm submission)
-    const feedbackForm = document.getElementById('feedbackForm');
-    feedbackForm.addEventListener('submit', function(event) {
-        // Prevent default form submission to handle it via JavaScript
-        event.preventDefault();
+            // Perform client-side validation using the browser's native checkValidity()
+            if (!this.checkValidity()) {
+                console.warn('Form validation failed. Please fill in all required fields.');
+                // The browser will show validation messages automatically
+                return; // Stop the submission process
+            }
 
-        // Perform client-side validation if needed (browser's native validation for 'required' attributes works first)
-        if (!this.checkValidity()) {
-            // If the form is invalid, the browser will display validation messages.
-            return;
-        }
+            // Disable button and show loading state
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Submitting...';
+                submitButton.classList.add('opacity-70', 'cursor-not-allowed');
+            }
 
-        // Collect form data (for Google Forms, this usually involves directly submitting to its action URL)
-        const formData = new FormData(this);
-        const data = {};
-        for (const [key, value] of formData.entries()) {
-            data[key] = value;
-        }
+            // Collect form data using FormData and convert to URLSearchParams
+            const formData = new FormData(this);
+            const data = new URLSearchParams();
+            for (const pair of formData.entries()) {
+                data.append(pair[0], pair[1]);
+            }
 
-        console.log('Form Data to be Submitted:', data);
+            // Get the Apps Script Web App URL from the form's action attribute
+            const appsScriptUrl = this.action;
 
-        // --- Google Forms Submission Placeholder ---
-        // In a real scenario, you would redirect to the Google Form's submission URL
-        // or make an AJAX request. Since we are using a placeholder URL:
-        // window.location.href = this.action + '?' + new URLSearchParams(data).toString();
-        // Or, if submitting directly without redirecting:
-        // fetch(this.action, {
-        //     method: 'POST',
-        //     body: formData, // For Google Forms, usually raw FormData works best
-        //     mode: 'no-cors' // Google Forms typically requires 'no-cors' mode for direct submission from client-side JS
-        // })
-        // .then(response => {
-        //     alert('Feedback submitted successfully! (This is a placeholder message. Ensure XYXYXYX are replaced with actual Google Form entry IDs and the action URL is correct.)');
-        //     feedbackForm.reset();
-        //     showHideFields(); // Reset dynamic fields after form reset
-        // })
-        // .catch(error => {
-        //     console.error('Error submitting form:', error);
-        //     alert('There was an error submitting your feedback.');
-        // });
-        // --- End Google Forms Submission Placeholder ---
+            try {
+                const response = await fetch(appsScriptUrl, {
+                    method: 'POST',
+                    mode: 'no-cors', // Required for direct submission to Apps Script from client-side
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: data, // Send URLSearchParams object
+                });
 
-        alert('Feedback submitted successfully! (This is a placeholder message. In a real scenario, this would send data to Google Forms via the form\'s action URL.)');
-        feedbackForm.reset(); // Reset the form fields
-        showHideFields(); // Re-apply visibility logic after reset
-    });
+                // Note: Due to 'no-cors' mode, response.ok will always be true
+                // and response.json() will likely fail.
+                // We rely on the Apps Script to successfully write to the sheet.
+                // For more robust error handling, you'd need a CORS-enabled backend
+                // or a different Apps Script deployment configuration.
+
+                console.log('Form submission initiated. Check your Google Sheet for results.');
+                showMessageBox('Thank you! Your feedback has been submitted successfully.');
+                feedbackForm.reset(); // Reset the form fields
+                showHideFields(); // Re-apply visibility logic after reset
+
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                showMessageBox('There was an error submitting your feedback. Please try again.');
+            } finally {
+                // Re-enable button and reset text
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'SUBMIT';
+                    submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
+                }
+            }
+        });
+    } else {
+        console.error('Feedback form element not found. Please ensure the form has id="feedbackForm".');
+    }
 });
