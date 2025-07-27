@@ -79,7 +79,7 @@
         <h1 class="text-3xl font-bold text-center mb-4 text-[#004d99]">Dear Stakeholder,</h1>
         <p class="text-left text-lg mb-6">The Vision and Mission statements are proposed to be updated for the academic year 2025–26 in alignment with the National Education Policy (NEP), the institute's Autonomous status, and evolving industrial expectations. The revision also aims to promote and inculcate innovation and incubation culture in academics and research <br><br> We kindly request you to share your valuable suggestions and feedback on the proposed Vision and Mission statements</p>
 
-        <form id="feedbackForm" action="YOUR_GOOGLE_FORM_RESPONSE_URL_HERE" method="POST" class="space-y-8">
+        <form id="feedbackForm" action="https://script.google.com/macros/s/AKfycbz1F7YUQxDGXWAfm8Db5Cbo15XI8JMCgwLUtHOTg0Im8MYxPBI99UKK-QH6CTTDDcKy/exec" method="POST" class="space-y-8">
             <!-- Institute New Initiatives Section -->
             <div class="new-initiatives-display bg-green-50 p-6 rounded-lg border border-green-200">
                 <h2 class="text-xl font-bold text-green-800 mb-3">Institute New Initiatives</h2>
@@ -99,7 +99,7 @@
             <!-- Stake Holder Type -->
             <div class="form-group">
                 <label for="stakeHolderType" class="block text-gray-700 text-sm font-bold mb-2">Stake Holder Type</label>
-                <select id="stakeHolderType" name="entry.STAKEHOLDER_TYPE_ID" required
+                <select id="stakeHolderType" name="Stakeholder Type" required
                         class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent">
                     <option value="">Select</option>
                     <option value="Student">Student</option>
@@ -119,31 +119,31 @@
                 <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Student Details</h3>
                 <div class="form-group">
                     <label for="studentName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="studentName" name="entry.STUDENT_NAME_ID"
+                    <input type="text" id="studentName" name="Student Full Name"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Full Name">
                 </div>
                 <div class="form-group">
                     <label for="studentEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="studentEmail" name="entry.STUDENT_EMAIL_ID"
+                    <input type="email" id="studentEmail" name="Student Email"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="your.email@example.com">
                 </div>
                 <div class="form-group">
                     <label for="studentPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
-                    <input type="tel" id="studentPhone" name="entry.STUDENT_PHONE_ID"
+                    <input type="tel" id="studentPhone" name="Student Phone"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., +91 9876543210">
                 </div>
                 <div class="form-group">
                     <label for="studentId" class="block text-gray-700 text-sm font-bold mb-2">Student ID</label>
-                    <input type="text" id="studentId" name="entry.STUDENT_ID_ID"
+                    <input type="text" id="studentId" name="Student ID"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Student ID">
                 </div>
                 <div class="form-group">
                     <label for="studentProgram" class="block text-gray-700 text-sm font-bold mb-2">Program/Course</label>
-                    <input type="text" id="studentProgram" name="entry.STUDENT_PROGRAM_ID"
+                    <input type="text" id="studentProgram" name="Student Program"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., B.Tech CSE">
                 </div>
@@ -154,31 +154,31 @@
                 <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Alumni Details</h3>
                 <div class="form-group">
                     <label for="alumniName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="alumniName" name="entry.ALUMNI_NAME_ID"
+                    <input type="text" id="alumniName" name="Alumni Full Name"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Full Name">
                 </div>
                 <div class="form-group">
                     <label for="alumniEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="alumniEmail" name="entry.ALUMNI_EMAIL_ID"
+                    <input type="email" id="alumniEmail" name="Alumni Email"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="your.email@example.com">
                 </div>
                 <div class="form-group">
                     <label for="alumniPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
-                    <input type="tel" id="alumniPhone" name="entry.ALUMNI_PHONE_ID"
+                    <input type="tel" id="alumniPhone" name="Alumni Phone"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., +91 9876543210">
                 </div>
                 <div class="form-group">
                     <label for="alumniGradYear" class="block text-gray-700 text-sm font-bold mb-2">Graduation Year</label>
-                    <input type="number" id="alumniGradYear" name="entry.ALUMNI_GRAD_YEAR_ID"
+                    <input type="number" id="alumniGradYear" name="Alumni Grad Year"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., 2020">
                 </div>
                 <div class="form-group">
                     <label for="alumniOccupation" class="block text-gray-700 text-sm font-bold mb-2">Current Occupation</label>
-                    <input type="text" id="alumniOccupation" name="entry.ALUMNI_OCCUPATION_ID"
+                    <input type="text" id="alumniOccupation" name="Alumni Occupation"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., Software Engineer">
                 </div>
@@ -189,31 +189,31 @@
                 <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Parent Details</h3>
                 <div class="form-group">
                     <label for="parentName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="parentName" name="entry.PARENT_NAME_ID"
+                    <input type="text" id="parentName" name="Parent Full Name"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Full Name">
                 </div>
                 <div class="form-group">
                     <label for="parentEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="parentEmail" name="entry.PARENT_EMAIL_ID"
+                    <input type="email" id="parentEmail" name="Parent Email"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="your.email@example.com">
                 </div>
                 <div class="form-group">
                     <label for="parentPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
-                    <input type="tel" id="parentPhone" name="entry.PARENT_PHONE_ID"
+                    <input type="tel" id="parentPhone" name="Parent Phone"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., +91 9876543210">
                 </div>
                 <div class="form-group">
                     <label for="childName" class="block text-gray-700 text-sm font-bold mb-2">Child's Name</label>
-                    <input type="text" id="childName" name="entry.CHILD_NAME_ID"
+                    <input type="text" id="childName" name="Child's Name"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Name of your child studying here">
                 </div>
                 <div class="form-group">
                     <label for="childProgram" class="block text-gray-700 text-sm font-bold mb-2">Child's Program/Course</label>
-                    <input type="text" id="childProgram" name="entry.CHILD_PROGRAM_ID"
+                    <input type="text" id="childProgram" name="Child's Program"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., B.Tech ECE">
                 </div>
@@ -224,31 +224,31 @@
                 <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Faculty/Staff Details</h3>
                 <div class="form-group">
                     <label for="facultyName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="facultyName" name="entry.FACULTY_NAME_ID"
+                    <input type="text" id="facultyName" name="Faculty Full Name"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Full Name">
                 </div>
                 <div class="form-group">
                     <label for="facultyEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="facultyEmail" name="entry.FACULTY_EMAIL_ID"
+                    <input type="email" id="facultyEmail" name="Faculty Email"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="your.email@example.com">
                 </div>
                 <div class="form-group">
                     <label for="facultyPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
-                    <input type="tel" id="facultyPhone" name="entry.FACULTY_PHONE_ID"
+                    <input type="tel" id="facultyPhone" name="Faculty Phone"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., +91 9876543210">
                 </div>
                 <div class="form-group">
                     <label for="facultyDepartment" class="block text-gray-700 text-sm font-bold mb-2">Department</label>
-                    <input type="text" id="facultyDepartment" name="entry.FACULTY_DEPT_ID"
+                    <input type="text" id="facultyDepartment" name="Faculty Department"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Department">
                 </div>
                 <div class="form-group">
                     <label for="facultyRole" class="block text-gray-700 text-sm font-bold mb-2">Role/Designation</label>
-                    <input type="text" id="facultyRole" name="entry.FACULTY_ROLE_ID"
+                    <input type="text" id="facultyRole" name="Faculty Role"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., Professor, Admin Staff">
                 </div>
@@ -259,31 +259,31 @@
                 <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Employer Details</h3>
                 <div class="form-group">
                     <label for="employerName" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
-                    <input type="text" id="employerName" name="entry.EMPLOYER_NAME_ID"
+                    <input type="text" id="employerName" name="Employer Name"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Full Name">
                 </div>
                 <div class="form-group">
                     <label for="employerEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="employerEmail" name="entry.EMPLOYER_EMAIL_ID"
+                    <input type="email" id="employerEmail" name="Employer Email"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="your.email@example.com">
                 </div>
                 <div class="form-group">
                     <label for="employerPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
-                    <input type="tel" id="employerPhone" name="entry.EMPLOYER_PHONE_ID"
+                    <input type="tel" id="employerPhone" name="Employer Phone"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., +91 9876543210">
                 </div>
                 <div class="form-group">
                     <label for="companyName" class="block text-gray-700 text-sm font-bold mb-2">Company Name</label>
-                    <input type="text" id="companyName" name="entry.COMPANY_NAME_ID"
+                    <input type="text" id="companyName" name="Company Name"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Company's Name">
                 </div>
                 <div class="form-group">
                     <label for="industryType" class="block text-gray-700 text-sm font-bold mb-2">Industry Type</label>
-                    <input type="text" id="industryType" name="entry.INDUSTRY_TYPE_ID"
+                    <input type="text" id="industryType" name="Industry Type"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., IT, Manufacturing">
                 </div>
@@ -294,31 +294,31 @@
                 <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Entrepreneur Details</h3>
                 <div class="form-group">
                     <label for="entrepreneurName" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
-                    <input type="text" id="entrepreneurName" name="entry.ENTREPRENEUR_NAME_ID"
+                    <input type="text" id="entrepreneurName" name="Entrepreneur Name"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Full Name">
                 </div>
                 <div class="form-group">
                     <label for="entrepreneurEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="entrepreneurEmail" name="entry.ENTREPRENEUR_EMAIL_ID"
+                    <input type="email" id="entrepreneurEmail" name="Entrepreneur Email"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="your.email@example.com">
                 </div>
                 <div class="form-group">
                     <label for="entrepreneurPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
-                    <input type="tel" id="entrepreneurPhone" name="entry.ENTREPRENEUR_PHONE_ID"
+                    <input type="tel" id="entrepreneurPhone" name="Entrepreneur Phone"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., +91 9876543210">
                 </div>
                 <div class="form-group">
                     <label for="startupName" class="block text-gray-700 text-sm font-bold mb-2">Startup Name</label>
-                    <input type="text" id="startupName" name="entry.STARTUP_NAME_ID"
+                    <input type="text" id="startupName" name="Startup Name"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Startup's Name">
                 </div>
                 <div class="form-group">
                     <label for="startupIndustry" class="block text-gray-700 text-sm font-bold mb-2">Startup Industry</label>
-                    <input type="text" id="startupIndustry" name="entry.STARTUP_INDUSTRY_ID"
+                    <input type="text" id="startupIndustry" name="Startup Industry"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., Tech, Retail">
                 </div>
@@ -329,25 +329,25 @@
                 <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Other Stakeholder Details</h3>
                 <div class="form-group">
                     <label for="otherName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="otherName" name="entry.OTHER_NAME_ID"
+                    <input type="text" id="otherName" name="Other Full Name"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Full Name">
                 </div>
                 <div class="form-group">
                     <label for="otherEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="otherEmail" name="entry.OTHER_EMAIL_ID"
+                    <input type="email" id="otherEmail" name="Other Email"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="your.email@example.com">
                 </div>
                 <div class="form-group">
                     <label for="otherPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
-                    <input type="tel" id="otherPhone" name="entry.OTHER_PHONE_ID"
+                    <input type="tel" id="otherPhone" name="Other Phone"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., +91 9876543210">
                 </div>
                 <div class="form-group">
                     <label for="otherSpecify" class="block text-gray-700 text-sm font-bold mb-2">Please Specify Your Role</label>
-                    <input type="text" id="otherSpecify" name="entry.OTHER_SPECIFY_ID"
+                    <input type="text" id="otherSpecify" name="Other Specify Role"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., Community Member, Vendor">
                 </div>
@@ -362,13 +362,13 @@
                     <p class="question block text-gray-700 text-sm font-bold mb-2">Does the Vision emphasize sustainability, entrepreneurship, and interdisciplinary collaboration as key drivers for societal advancement?</p>
                     <div class="radio-group flex flex-wrap gap-4">
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.VISION_Q1_ID" value="Relevant to current societal and technological needs" required class="form-radio"> Relevant to current societal and technological needs
+                            <input type="radio" name="Vision Q1" value="Relevant to current societal and technological needs" required class="form-radio"> Relevant to current societal and technological needs
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.VISION_Q1_ID" value="Somewhat relevant, but could be clearer" class="form-radio"> Somewhat relevant, but could be clearer
+                            <input type="radio" name="Vision Q1" value="Somewhat relevant, but could be clearer" class="form-radio"> Somewhat relevant, but could be clearer
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.VISION_Q1_ID" value="Not relevant to present or future societal demands" class="form-radio"> Not relevant to present or future societal demands
+                            <input type="radio" name="Vision Q1" value="Not relevant to present or future societal demands" class="form-radio"> Not relevant to present or future societal demands
                         </label>
                     </div>
                 </div>
@@ -378,13 +378,13 @@
                     <p class="question block text-gray-700 text-sm font-bold mb-2">Does the Vision Statement reflect the goal of delivering quality technical and management education aligned with national and international technological advancements?</p>
                     <div class="radio-group flex flex-wrap gap-4">
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.VISION_Q2_ID" value="Relevant to current and emerging national and global technological trends" required class="form-radio"> Relevant to current and emerging national and global technological trends
+                            <input type="radio" name="Vision Q2" value="Relevant to current and emerging national and global technological trends" required class="form-radio"> Relevant to current and emerging national and global technological trends
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.VISION_Q2_ID" value="Somewhat relevant, needs better alignment with global advancements" class="form-radio"> Somewhat relevant, needs better alignment with global advancements
+                            <input type="radio" name="Vision Q2" value="Somewhat relevant, needs better alignment with global advancements" class="form-radio"> Somewhat relevant, needs better alignment with global advancements
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.VISION_Q2_ID" value="Not relevant to present or future technological expectations" class="form-radio"> Not relevant to present or future technological expectations
+                            <input type="radio" name="Vision Q2" value="Not relevant to present or future technological expectations" class="form-radio"> Not relevant to present or future technological expectations
                         </label>
                     </div>
                 </div>
@@ -394,13 +394,13 @@
                     <p class="question block text-gray-700 text-sm font-bold mb-2">Does the institution's current progress reflect alignment with its Vision and the future aspirations of both the institution and its stakeholders over the next 5–10 years?</p>
                     <div class="radio-group flex flex-wrap gap-4">
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.VISION_Q3_ID" value="Relevant to the institution’s long-term goals and stakeholder expectations" required class="form-radio"> Relevant to the institution’s long-term goals and stakeholder expectations
+                            <input type="radio" name="Vision Q3" value="Relevant to the institution’s long-term goals and stakeholder expectations" required class="form-radio"> Relevant to the institution’s long-term goals and stakeholder expectations
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.VISION_Q3_ID" value="Partially relevant, some gaps in alignment need to be addressed" class="form-radio"> Partially relevant, some gaps in alignment need to be addressed
+                            <input type="radio" name="Vision Q3" value="Partially relevant, some gaps in alignment need to be addressed" class="form-radio"> Partially relevant, some gaps in alignment need to be addressed
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.VISION_Q3_ID" value="Not relevant to the envisioned future direction" class="form-radio"> Not relevant to the envisioned future direction
+                            <input type="radio" name="Vision Q3" value="Not relevant to the envisioned future direction" class="form-radio"> Not relevant to the envisioned future direction
                         </label>
                     </div>
                 </div>
@@ -408,7 +408,7 @@
                 <!-- Vision Suggestions -->
                 <div class="form-group">
                     <label for="visionSuggestion" class="block text-gray-700 text-sm font-bold mb-2">Suggestions</label>
-                    <textarea id="visionSuggestion" name="entry.VISION_SUGGESTION_ID" rows="5"
+                    <textarea id="visionSuggestion" name="Vision Suggestions" rows="5"
                               class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent resize-y"
                               placeholder="Enter your suggestions here..."></textarea>
                 </div>
@@ -425,13 +425,13 @@
                     <p class="question block text-gray-700 text-sm font-bold mb-2">Is the mission of building strong networks with society, industry, and academia, along with providing necessary infrastructure, on the right path toward fulfilling the institution’s Vision?</p>
                     <div class="radio-group flex flex-wrap gap-4">
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.MISSION_Q1_ID" value="Yes, clearly on the right path" required class="form-radio"> Yes, clearly on the right path
+                            <input type="radio" name="Mission Q1" value="Yes, clearly on the right path" required class="form-radio"> Yes, clearly on the right path
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.MISSION_Q1_ID" value="Somewhat aligned, needs strengthening" class="form-radio"> Somewhat aligned, needs strengthening
+                            <input type="radio" name="Mission Q1" value="Somewhat aligned, needs strengthening" class="form-radio"> Somewhat aligned, needs strengthening
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.MISSION_Q1_ID" value="Not aligned, needs revision" class="form-radio"> Not aligned, needs revision
+                            <input type="radio" name="Mission Q1" value="Not aligned, needs revision" class="form-radio"> Not aligned, needs revision
                         </label>
                     </div>
                 </div>
@@ -441,13 +441,13 @@
                     <p class="question block text-gray-700 text-sm font-bold mb-2">Is the focus on lifelong learning and solving eco-social problems aligned with the Vision of societal advancement?</p>
                     <div class="radio-group flex flex-wrap gap-4">
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.MISSION_Q2_ID" value="Relevant to long-term Vision and values" required class="form-radio"> Relevant to long-term Vision and values
+                            <input type="radio" name="Mission Q2" value="Relevant to long-term Vision and values" required class="form-radio"> Relevant to long-term Vision and values
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.MISSION_Q2_ID" value="Somewhat relevant, can be improved" class="form-radio"> Somewhat relevant, can be improved
+                            <input type="radio" name="Mission Q2" value="Somewhat relevant, can be improved" class="form-radio"> Somewhat relevant, can be improved
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.MISSION_Q2_ID" value="Not relevant, should be revised" class="form-radio"> Not relevant, should be revised
+                            <input type="radio" name="Mission Q2" value="Not relevant, should be revised" class="form-radio"> Not relevant, should be revised
                         </label>
                     </div>
                 </div>
@@ -457,20 +457,20 @@
                     <p class="question block text-gray-700 text-sm font-bold mb-2">Is the mission of encouraging research, innovation, and collaboration with society and industry a suitable path to reach the institutional Vision?</p>
                     <div class="radio-group flex flex-wrap gap-4">
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.MISSION_Q3_ID" value="Relevant to the Vision and future goals" required class="form-radio"> Relevant to the Vision and future goals
+                            <input type="radio" name="Mission Q3" value="Relevant to the Vision and future goals" required class="form-radio"> Relevant to the Vision and future goals
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.MISSION_Q3_ID" value="Somewhat relevant, needs better alignment" class="form-radio"> Somewhat relevant, needs better alignment
+                            <input type="radio" name="Mission Q3" value="Somewhat relevant, needs better alignment" class="form-radio"> Somewhat relevant, needs better alignment
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="entry.MISSION_Q3_ID" value="Not relevant, needs significant changes" class="form-radio"> Not relevant, needs significant changes
+                            <input type="radio" name="Mission Q3" value="Not relevant, needs significant changes" class="form-radio"> Not relevant, needs significant changes
                         </label>
                     </div>
                 </div>   
              <!-- Mission Suggestions -->
                 <div class="form-group">
                     <label for="missionSuggestion" class="block text-gray-700 text-sm font-bold mb-2">Suggestions</label>
-                    <textarea id="missionSuggestion" name="entry.MISSION_SUGGESTION_ID" rows="5"
+                    <textarea id="missionSuggestion" name="Mission Suggestions" rows="5"
                               class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent resize-y"
                               placeholder="Enter your suggestions here..."></textarea>
                 </div>
