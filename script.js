@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             currentFieldsDiv = document.getElementById('employerFields');
         } else if (selectedType === 'Entrepreneur') {
             currentFieldsDiv = document.getElementById('entrepreneurFields');
-        } else if (selectedType === 'Management') {
+        } else if (selectedType === 'Other') {
             currentFieldsDiv = document.getElementById('otherFields');
         }
 
