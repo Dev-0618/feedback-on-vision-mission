@@ -49,6 +49,14 @@
                 <span><i class="fas fa-phone mr-1"></i> +91 7093029032</span>
                 <span><i class="fas fa-envelope mr-1"></i> admissions@atria.edu</span>
             </div>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+                <a href="#" class="hover:underline">Contact Us</a>
+                <a href="#" class="hover:underline">NAAC</a>
+                <a href="#" class="hover:underline">IQAC</a>
+                <a href="#" class="hover:underline">MBA</a>
+                <a href="#" class="hover:underline">Research</a>
+                <a href="#" class="hover:underline">Student Login</a>
+            </div>
         </div>
         <!-- Main Navbar -->
         <div class="flex flex-col md:flex-row justify-between items-center py-4 px-4 md:px-8">
@@ -58,7 +66,7 @@
             <nav>
                 <ul class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-lg font-semibold">
                     <li><a href="atria.edu" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Home</a></li>
-                    <li><a href=https://atria.edu/about-us/#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">About Us</a></li>
+                    <li><a href="https://atria.edu/about-us/#" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">About Us</a></li>
                     <li><a href="https://atria.edu/departments/information-science/" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Academics</a></li>
                     <li><a href="https://atria.edu/admissions/" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Admissions</a></li>
                     <li><a href="https://atria.edu/campus-life/gallery/" class="text-gray-700 hover:text-[#004d99] transition-colors duration-200">Campus Life</a></li>
@@ -71,7 +79,7 @@
         <h1 class="text-3xl font-bold text-center mb-4 text-[#004d99]">Dear Stakeholder,</h1>
         <p class="text-justify text-lg mb-6">The Vision and Mission statements are proposed to be updated for the academic year 2025–26 in alignment with the National Education Policy (NEP), the institute's Autonomous status, and evolving industrial expectations. The revision also aims to promote and inculcate innovation and incubation culture in academics and research <br><br> We kindly request you to share your valuable suggestions and feedback on the proposed Vision and Mission statements</p>
 
-        <form id="feedbackForm" action="https://script.google.com/macros/s/AKfycbz1F7YUQxDGXWAfm8Db5Cbo15XI8JMCgwLUtHOTg0Im8MYxPBI99UKK-QH6CTTDDcKy/exec" method="POST" class="space-y-8">
+        <form id="feedbackForm" action="https://script.google.com/macros/s/AKfycbwCUe-VUg6mc7t30vlAY2No4jnQQpsNQbJPfTM39Vz6duTmKXfSOa8fC6HFScY0H_Nt/exec" method="POST" class="space-y-8">
             <!-- Institute New Initiatives Section -->
             <div class="new-initiatives-display bg-green-50 p-6 rounded-lg border border-green-200">
                 <h2 class="text-xl font-bold text-green-800 mb-3">Institute New Initiatives</h2>
@@ -97,10 +105,10 @@
                     <option value="Student">Student</option>
                     <option value="Alumni">Alumni</option>
                     <option value="Parent">Parent</option>
-                    <option value="Faculty and Staff">Faculty and Staff</option>
+                    <option value="Management and GC members">Management and GC members</option>
                     <option value="Employer">Employer</option>
                     <option value="Entrepreneur">Entrepreneur</option>
-                    <option value="Other">Management</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 
@@ -169,7 +177,7 @@
                            placeholder="e.g., 2020">
                 </div>
                 <div class="form-group">
-                    <label for="alumniOccupation" class="block text-gray-700 text-sm font-bold mb-2">Current Occupation</label>
+                    <label for="alumniOccupation" class="block text-gray-700 text-sm font-bold mb-2">Current Occupation/Designation</label>
                     <input type="text" id="alumniOccupation" name="Alumni Occupation"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="e.g., Software Engineer">
@@ -211,38 +219,20 @@
                 </div>
             </div>
 
-            <!-- Faculty and Staff Specific Fields -->
-            <div id="facultyStaffFields" class="stakeholder-specific-fields space-y-6">
-                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Faculty/Staff Details</h3>
+            <!-- Management and GC members Specific Fields (formerly Faculty and Staff) -->
+            <div id="managementGcFields" class="stakeholder-specific-fields space-y-6">
+                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Management and GC Members Details</h3>
                 <div class="form-group">
-                    <label for="facultyName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="facultyName" name="Faculty Full Name"
+                    <label for="managementName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="managementName" name="Management Full Name"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="Your Full Name">
                 </div>
                 <div class="form-group">
-                    <label for="facultyEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="facultyEmail" name="Faculty Email"
+                    <label for="managementEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="managementEmail" name="Management Email"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="your.email@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="facultyPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
-                    <input type="tel" id="facultyPhone" name="Faculty Phone"
-                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
-                           placeholder="e.g., +91 9876543210">
-                </div>
-                <div class="form-group">
-                    <label for="facultyDepartment" class="block text-gray-700 text-sm font-bold mb-2">Department</label>
-                    <input type="text" id="facultyDepartment" name="Faculty Department"
-                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
-                           placeholder="Your Department">
-                </div>
-                <div class="form-group">
-                    <label for="facultyRole" class="block text-gray-700 text-sm font-bold mb-2">Role/Designation</label>
-                    <input type="text" id="facultyRole" name="Faculty Role"
-                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
-                           placeholder="e.g., Professor, Admin Staff">
                 </div>
             </div>
 
@@ -274,10 +264,10 @@
                            placeholder="Your Company's Name">
                 </div>
                 <div class="form-group">
-                    <label for="industryType" class="block text-gray-700 text-sm font-bold mb-2">Designation</label>
-                    <input type="text" id="industryType" name="Industry Type"
+                    <label for="employerDesignation" class="block text-gray-700 text-sm font-bold mb-2">Designation</label>
+                    <input type="text" id="employerDesignation" name="Employer Designation"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
-                           placeholder="e.g., IT, Manufacturing">
+                           placeholder="e.g., HR Manager, CEO">
                 </div>
             </div>
 
@@ -309,16 +299,16 @@
                            placeholder="Your Startup's Name">
                 </div>
                 <div class="form-group">
-                    <label for="startupIndustry" class="block text-gray-700 text-sm font-bold mb-2">Designation</label>
-                    <input type="text" id="startupIndustry" name="Startup Industry"
+                    <label for="startupDesignation" class="block text-gray-700 text-sm font-bold mb-2">Designation</label>
+                    <input type="text" id="startupDesignation" name="Startup Designation"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
-                           placeholder="e.g., Tech, Retail">
+                           placeholder="e.g., Founder, CEO">
                 </div>
             </div>
 
-            <!-- Other Specific Fields -->
+            <!-- NEW: Other Specific Fields -->
             <div id="otherFields" class="stakeholder-specific-fields space-y-6">
-                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Management Details</h3>
+                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Other Details</h3>
                 <div class="form-group">
                     <label for="otherName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
                     <input type="text" id="otherName" name="Other Full Name"
@@ -331,121 +321,138 @@
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="your.email@example.com">
                 </div>
-
+                <div class="form-group">
+                    <label for="otherPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                    <input type="tel" id="otherPhone" name="Other Phone"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., +91 9876543210">
+                </div>
             </div>
-<div class="vision-section bg-blue-50 p-6 rounded-lg border border-blue-200">
-    <h2 class="text-xl font-bold text-[#004d99] mb-3"><strong>Institute Vision</strong></h2>
-    <p class="mb-6 text-gray-700 text-justify"><strong>To be a pioneering institution empowering learner through creative problem-solving, sustainability-focused ethical education, and a vibrant culture of interdisciplinary research, innovation, and entrepreneurship for societal advancement</strong></p>
 
-    <div class="form-group mb-6">
-        <p class="question block text-gray-700 text-sm font-bold mb-2">Does the Vision emphasize sustainability, entrepreneurship, and interdisciplinary collaboration as key drivers for societal advancement?</p>
-        <div class="radio-group flex flex-wrap gap-4">
-            <label class="inline-flex items-center">
-                <input type="radio" name="Vision Q1" value="Relevant to current societal and technological needs" required class="form-radio"> Relevant to current societal and technological needs
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Vision Q1" value="Somewhat relevant, but could be clearer" class="form-radio"> Somewhat relevant, but could be clearer
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Vision Q1" value="Not relevant to present or future societal demands" class="form-radio"> Not relevant to present or future societal demands
-            </label>
-        </div>
-    </div>
+            <!-- Institute Vision Section -->
+            <div class="vision-section bg-blue-50 p-6 rounded-lg border border-blue-200 mt-4">
+                <h2 class="text-xl font-bold text-[#004d99] mb-3"><strong>Institute Vision</strong></h2>
+                <p class="mb-6 text-gray-700 text-justify"><strong>"To be a pioneering institution empowering learner through creative problem-solving, sustainability-focused ethical education, and a vibrant culture of interdisciplinary research, innovation, and entrepreneurship for societal advancement"</strong></p>
 
-    <div class="form-group mb-6">
-        <p class="question block text-gray-700 text-sm font-bold mb-2">Does the Vision Statement reflect the goal of delivering quality technical and management education aligned with national and international technological advancements?</p>
-        <div class="radio-group flex flex-wrap gap-4">
-            <label class="inline-flex items-center">
-                <input type="radio" name="Vision Q2" value="Relevant to current and emerging national and global technological trends" required class="form-radio"> Relevant to current and emerging national and global technological trends
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Vision Q2" value="Somewhat relevant, needs better alignment with global advancements" class="form-radio"> Somewhat relevant, needs better alignment with global advancements
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Vision Q2" value="Not relevant to present or future technological expectations" class="form-radio"> Not relevant to present or future technological expectations
-            </label>
-        </div>
-    </div>
+                <!-- Vision Feedback Question 1 -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Does the Vision emphasize sustainability, entrepreneurship, and interdisciplinary collaboration as key drivers for societal advancement?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Vision Q1" value="Relevant to current societal and technological needs" required class="form-radio"> Relevant to current societal and technological needs
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Vision Q1" value="Somewhat relevant, but could be clearer" class="form-radio"> Somewhat relevant, but could be clearer
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Vision Q1" value="Not relevant to present or future societal demands" class="form-radio"> Not relevant to present or future societal demands
+                        </label>
+                    </div>
+                </div>
 
-    <div class="form-group mb-6">
-        <p class="question block text-gray-700 text-sm font-bold mb-2">Does the institution's current progress reflect alignment with its Vision and the future aspirations of both the institution and its stakeholders over the next 5–10 years?</p>
-        <div class="radio-group flex flex-wrap gap-4">
-            <label class="inline-flex items-center">
-                <input type="radio" name="Vision Q3" value="Relevant to the institution’s long-term goals and stakeholder expectations" required class="form-radio"> Relevant to the institution’s long-term goals and stakeholder expectations
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Vision Q3" value="Partially relevant, some gaps in alignment need to be addressed" class="form-radio"> Partially relevant, some gaps in alignment need to be addressed
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Vision Q3" value="Not relevant to the envisioned future direction" class="form-radio"> Not relevant to the envisioned future direction
-            </label>
-        </div>
-    </div>
+                <!-- Vision Feedback Question 2 -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Does the Vision Statement reflect the goal of delivering quality technical and management education aligned with national and international technological advancements?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Vision Q2" value="Relevant to current and emerging national and global technological trends" required class="form-radio"> Relevant to current and emerging national and global technological trends
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Vision Q2" value="Somewhat relevant, needs better alignment with global advancements" class="form-radio"> Somewhat relevant, needs better alignment with global advancements
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Vision Q2" value="Not relevant to present or future technological expectations" class="form-radio"> Not relevant to present or future technological expectations
+                        </label>
+                    </div>
+                </div>
 
-    <div class="form-group">
-        <label for="visionSuggestion" class="block text-gray-700 text-sm font-bold mb-2">Suggestions</label>
-        <textarea id="visionSuggestion" name="Vision Suggestions" rows="5"
-                  class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent resize-y"
-                  placeholder="Enter your suggestions here..."></textarea>
-    </div>
-</div>
+                <!-- Vision Feedback Question 3 -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Does the institution's current progress reflect alignment with its Vision and the future aspirations of both the institution and its stakeholders over the next 5–10 years?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Vision Q3" value="Relevant to the institution’s long-term goals and stakeholder expectations" required class="form-radio"> Relevant to the institution’s long-term goals and stakeholder expectations
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Vision Q3" value="Partially relevant, some gaps in alignment need to be addressed" class="form-radio"> Partially relevant, some gaps in alignment need to be addressed
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Vision Q3" value="Not relevant to the envisioned future direction" class="form-radio"> Not relevant to the envisioned future direction
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Vision Suggestions -->
+                <div class="form-group">
+                    <label for="visionSuggestion" class="block text-gray-700 text-sm font-bold mb-2">Suggestions</label>
+                    <textarea id="visionSuggestion" name="Vision Suggestions" rows="5"
+                              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent resize-y"
+                              placeholder="Enter your suggestions here..."></textarea>
+                </div>
+            </div>
 
 
-<div class="mission-section bg-purple-50 p-6 rounded-lg border border-purple-200">
-    <h2 class="text-xl font-bold text-[#004d99] mb-3">Institute Mission</h2>
-    <p class="mb-6 text-gray-700 text-justify"><strong>M1: Foster a dynamic learning environment and pedagogy that encourages creative problem-solving through innovative tools and techniques<br><br>M2: Cultivate lifelong learning by engaging in eco-social problem solving aligned with sustainability goals, while nurturing ethical values and responsibility.<br><br>M3: To inculcate the culture of problem identification, research, innovation, and incubation by promoting strong networking with society, industry, academic institutions, and mentors, while ensuring the availability of necessary infrastructure and resources</strong></p>
+            <!-- Institute Mission Section -->
+            <div class="mission-section bg-purple-50 p-6 rounded-lg border border-purple-200 mt-4">
+                <h2 class="text-xl font-bold text-[#004d99] mb-3">Institute Mission</h2>
+                <p class="mb-6 text-gray-700 text-justify"><strong>M1: "Foster a dynamic learning environment and pedagogy that encourages creative problem-solving through innovative tools and techniques"<br><br>M2: "Cultivate lifelong learning by engaging in eco-social problem solving aligned with sustainability goals, while nurturing ethical values and responsibility."<br><br>M3: "To inculcate the culture of problem identification, research, innovation, and incubation by promoting strong networking with society, industry, academic institutions, and mentors, while ensuring the availability of necessary infrastructure and resources"</strong></p>
 
-    <div class="form-group mb-6">
-        <p class="question block text-gray-700 text-sm font-bold mb-2">Is the mission of building strong networks with society, industry, and academia, along with providing necessary infrastructure, on the right path toward fulfilling the institution’s Vision?</p>
-        <div class="radio-group flex flex-wrap gap-4">
-            <label class="inline-flex items-center">
-                <input type="radio" name="Mission Q1" value="Yes, clearly on the right path" required class="form-radio"> Yes, clearly on the right path
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Mission Q1" value="Somewhat aligned, needs strengthening" class="form-radio"> Somewhat aligned, needs strengthening
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Mission Q1" value="Not aligned, needs revision" class="form-radio"> Not aligned, needs revision
-            </label>
-        </div>
-    </div>
+                <!-- Mission Feedback Question 1 -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Is the mission of building strong networks with society, industry, and academia, along with providing necessary infrastructure, on the right path toward fulfilling the institution’s Vision?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Mission Q1" value="Yes, clearly on the right path" required class="form-radio"> Yes, clearly on the right path
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Mission Q1" value="Somewhat aligned, needs strengthening" class="form-radio"> Somewhat aligned, needs strengthening
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Mission Q1" value="Not aligned, needs revision" class="form-radio"> Not aligned, needs revision
+                        </label>
+                    </div>
+                </div>
 
-    <div class="form-group mb-6">
-        <p class="question block text-gray-700 text-sm font-bold mb-2">Is the focus on lifelong learning and solving eco-social problems aligned with the Vision of societal advancement?</p>
-        <div class="radio-group flex flex-wrap gap-4">
-            <label class="inline-flex items-center">
-                <input type="radio" name="Mission Q2" value="Relevant to long-term Vision and values" required class="form-radio"> Relevant to long-term Vision and values
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Mission Q2" value="Somewhat relevant, can be improved" class="form-radio"> Somewhat relevant, can be improved
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Mission Q2" value="Not relevant, should be revised" class="form-radio"> Not relevant, should be revised
-            </label>
-        </div>
-    </div>
+                <!-- Mission Feedback Question 2 -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Is the focus on lifelong learning and solving eco-social problems aligned with the Vision of societal advancement?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Mission Q2" value="Relevant to long-term Vision and values" required class="form-radio"> Relevant to long-term Vision and values
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Mission Q2" value="Somewhat relevant, can be improved" class="form-radio"> Somewhat relevant, can be improved
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Mission Q2" value="Not relevant, should be revised" class="form-radio"> Not relevant, should be revised
+                        </label>
+                    </div>
+                </div>
 
-    <div class="form-group mb-6">
-        <p class="question block text-gray-700 text-sm font-bold mb-2">Is the mission of encouraging research, innovation, and collaboration with society and industry a suitable path to reach the institutional Vision?</p>
-        <div class="radio-group flex flex-wrap gap-4">
-            <label class="inline-flex items-center">
-                <input type="radio" name="Mission Q3" value="Relevant to the Vision and future goals" required class="form-radio"> Relevant to the Vision and future goals
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Mission Q3" value="Somewhat relevant, needs better alignment" class="form-radio"> Somewhat relevant, needs better alignment
-            </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="Mission Q3" value="Not relevant, needs significant changes" class="form-radio"> Not relevant, needs significant changes
-            </label>
-        </div>
-    </div> 
-    <div class="form-group">
-        <label for="missionSuggestion" class="block text-gray-700 text-sm font-bold mb-2">Suggestions</label>
-        <textarea id="missionSuggestion" name="Mission Suggestions" rows="5"
-                  class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent resize-y"
-                  placeholder="Enter your suggestions here..."></textarea>
-    </div>
-</div>
+                <!-- Mission Feedback Question 3 -->
+                <div class="form-group mb-6">
+                    <p class="question block text-gray-700 text-sm font-bold mb-2">Is the mission of encouraging research, innovation, and collaboration with society and industry a suitable path to reach the institutional Vision?</p>
+                    <div class="radio-group flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Mission Q3" value="Relevant to the Vision and future goals" required class="form-radio"> Relevant to the Vision and future goals
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Mission Q3" value="Somewhat relevant, needs better alignment" class="form-radio"> Somewhat relevant, needs better alignment
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="Mission Q3" value="Not relevant, needs significant changes" class="form-radio"> Not relevant, needs significant changes
+                        </label>
+                    </div>
+                </div>   
+             <!-- Mission Suggestions -->
+                <div class="form-group">
+                    <label for="missionSuggestion" class="block text-gray-700 text-sm font-bold mb-2">Suggestions</label>
+                    <textarea id="missionSuggestion" name="Mission Suggestions" rows="5"
+                              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent resize-y"
+                              placeholder="Enter your suggestions here..."></textarea>
+                </div>
+            </div>
+
             <!-- Submit Button -->
             <div class="form-group text-center">
                 <button type="submit"
