@@ -1,7 +1,8 @@
 // feedback-form-script.js
 
-// This script handles dynamic field visibility based on stakeholder type
-// and the form submission logic for the Atria Vision & Mission Feedback Form.
+// This script handles dynamic field visibility based on stakeholder type,
+// form submission logic for Google Sheets via Apps Script,
+// and client-side session-based prevention for multiple submissions.
 
 document.addEventListener('DOMContentLoaded', function() {
     const stakeHolderTypeSelect = document.getElementById('stakeHolderType');
@@ -9,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const stakeholderSpecificFields = document.querySelectorAll('.stakeholder-specific-fields');
     const feedbackForm = document.getElementById('feedbackForm');
     const submitButton = feedbackForm ? feedbackForm.querySelector('button[type="submit"]') : null;
+
+    // Define a key for localStorage to track submission status
+    const SUBMISSION_KEY = 'atriaFeedbackSubmitted';
 
     // --- Message Box Elements (Replacing alert/confirm) ---
     // Create a simple message box dynamically
@@ -38,6 +42,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     // --- End Message Box Elements ---
 
+    // Function to check if the form has already been submitted in this browser
+    function checkIfSubmitted() {
+        if (localStorage.getItem(SUBMISSION_KEY) === 'true') {
+            if (feedbackForm) {
+                feedbackForm.style.display = 'none'; // Hide the form
+                showMessageBox('Thank you for your feedback! You have already submitted this form.');
+            }
+            return true;
+        }
+        return false;
+    }
 
     // Function to show/hide relevant fields based on selected stakeholder type
     function showHideFields() {
@@ -60,13 +75,13 @@ document.addEventListener('DOMContentLoaded', function() {
             currentFieldsDiv = document.getElementById('alumniFields');
         } else if (selectedType === 'Parent') {
             currentFieldsDiv = document.getElementById('parentFields');
-        } else if (selectedType === 'Faculty and Staff') {
-            currentFieldsDiv = document.getElementById('facultyStaffFields');
+        } else if (selectedType === 'Management and GC members') { // Updated ID for Management/GC
+            currentFieldsDiv = document.getElementById('managementGcFields');
         } else if (selectedType === 'Employer') {
             currentFieldsDiv = document.getElementById('employerFields');
         } else if (selectedType === 'Entrepreneur') {
             currentFieldsDiv = document.getElementById('entrepreneurFields');
-        } else if (selectedType === 'Other') {
+        } else if (selectedType === 'Other') { // New 'Other' section
             currentFieldsDiv = document.getElementById('otherFields');
         }
 
@@ -78,6 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 input.setAttribute('required', 'required');
             });
         }
+    }
+
+    // Check submission status on page load
+    if (checkIfSubmitted()) {
+        return; // Stop further script execution if already submitted
     }
 
     // Attach the event listener to the stakeholder type dropdown
@@ -136,15 +156,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 console.log('Form submission initiated. Check your Google Sheet for results.');
                 showMessageBox('Thank you! Your feedback has been submitted successfully.');
+                
+                // Mark as submitted in localStorage
+                localStorage.setItem(SUBMISSION_KEY, 'true');
                 feedbackForm.reset(); // Reset the form fields
                 showHideFields(); // Re-apply visibility logic after reset
+                feedbackForm.style.display = 'none'; // Hide the form after successful submission
 
             } catch (error) {
                 console.error('Error submitting form:', error);
                 showMessageBox('There was an error submitting your feedback. Please try again.');
             } finally {
-                // Re-enable button and reset text
-                if (submitButton) {
+                // Re-enable button and reset text (only if form is still visible)
+                if (submitButton && feedbackForm.style.display !== 'none') {
                     submitButton.disabled = false;
                     submitButton.textContent = 'SUBMIT';
                     submitButton.classList.remove('opacity-70', 'cursor-not-allowed');
