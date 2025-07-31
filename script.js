@@ -75,13 +75,15 @@ document.addEventListener('DOMContentLoaded', function() {
             currentFieldsDiv = document.getElementById('alumniFields');
         } else if (selectedType === 'Parent') {
             currentFieldsDiv = document.getElementById('parentFields');
-        } else if (selectedType === 'Management and GC members') { // Updated ID for Management/GC
+        } else if (selectedType === 'Management and GC members') {
             currentFieldsDiv = document.getElementById('managementGcFields');
+        } else if (selectedType === 'Faculty and Staff') { // Re-added Faculty and Staff
+            currentFieldsDiv = document.getElementById('facultyStaffFields');
         } else if (selectedType === 'Employer') {
             currentFieldsDiv = document.getElementById('employerFields');
         } else if (selectedType === 'Entrepreneur') {
             currentFieldsDiv = document.getElementById('entrepreneurFields');
-        } else if (selectedType === 'Other') { // New 'Other' section
+        } else if (selectedType === 'Other') {
             currentFieldsDiv = document.getElementById('otherFields');
         }
 
