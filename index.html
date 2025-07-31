@@ -49,6 +49,14 @@
                 <span><i class="fas fa-phone mr-1"></i> +91 7093029032</span>
                 <span><i class="fas fa-envelope mr-1"></i> admissions@atria.edu</span>
             </div>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+                <a href="#" class="hover:underline">Contact Us</a>
+                <a href="#" class="hover:underline">NAAC</a>
+                <a href="#" class="hover:underline">IQAC</a>
+                <a href="#" class="hover:underline">MBA</a>
+                <a href="#" class="hover:underline">Research</a>
+                <a href="#" class="hover:underline">Student Login</a>
+            </div>
         </div>
         <!-- Main Navbar -->
         <div class="flex flex-col md:flex-row justify-between items-center py-4 px-4 md:px-8">
@@ -71,7 +79,7 @@
         <h1 class="text-3xl font-bold text-center mb-4 text-[#004d99]">Dear Stakeholder,</h1>
         <p class="text-justify text-lg mb-6">The Vision and Mission statements are proposed to be updated for the academic year 2025–26 in alignment with the National Education Policy (NEP), the institute's Autonomous status, and evolving industrial expectations. The revision also aims to promote and inculcate innovation and incubation culture in academics and research <br><br> We kindly request you to share your valuable suggestions and feedback on the proposed Vision and Mission statements</p>
 
-        <form id="feedbackForm" action="https://script.google.com/macros/s/AKfycbwCUe-VUg6mc7t30vlAY2No4jnQQpsNQbJPfTM39Vz6duTmKXfSOa8fC6HFScY0H_Nt/exec" method="POST" class="space-y-8">
+        <form id="feedbackForm" action="https://script.google.com/macros/s/AKfycbxCTlCrnPyoR_7TGd8e079DrwqwENJzJ5bRR7BFxdFGiao0WFrPcc3Gx8RXw8ZUujKI/exec" method="POST" class="space-y-8">
             <!-- Institute New Initiatives Section -->
             <div class="new-initiatives-display bg-green-50 p-6 rounded-lg border border-green-200">
                 <h2 class="text-xl font-bold text-green-800 mb-3">Institute New Initiatives</h2>
@@ -98,6 +106,7 @@
                     <option value="Alumni">Alumni</option>
                     <option value="Parent">Parent</option>
                     <option value="Management and GC members">Management and GC members</option>
+                    <option value="Faculty and Staff">Faculty and Staff</option> <!-- Re-added -->
                     <option value="Employer">Employer</option>
                     <option value="Entrepreneur">Entrepreneur</option>
                     <option value="Other">Other</option>
@@ -211,7 +220,7 @@
                 </div>
             </div>
 
-            <!-- Management and GC members Specific Fields (formerly Faculty and Staff) -->
+            <!-- Management and GC members Specific Fields -->
             <div id="managementGcFields" class="stakeholder-specific-fields space-y-6">
                 <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Management and GC Members Details</h3>
                 <div class="form-group">
@@ -225,6 +234,41 @@
                     <input type="email" id="managementEmail" name="Management Email"
                            class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
                            placeholder="your.email@example.com">
+                </div>
+            </div>
+
+            <!-- NEW: Faculty and Staff Specific Fields -->
+            <div id="facultyStaffFields" class="stakeholder-specific-fields space-y-6">
+                <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Faculty and Staff Details</h3>
+                <div class="form-group">
+                    <label for="facultyName" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="facultyName" name="Faculty Full Name"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="facultyEmail" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="facultyEmail" name="Faculty Email"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="facultyPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                    <input type="tel" id="facultyPhone" name="Faculty Phone"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., +91 9876543210">
+                </div>
+                <div class="form-group">
+                    <label for="facultyDepartment" class="block text-gray-700 text-sm font-bold mb-2">Department</label>
+                    <input type="text" id="facultyDepartment" name="Faculty Department"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="Your Department">
+                </div>
+                <div class="form-group">
+                    <label for="facultyRole" class="block text-gray-700 text-sm font-bold mb-2">Role/Designation</label>
+                    <input type="text" id="facultyRole" name="Faculty Role"
+                           class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-[#004d99] focus:border-transparent"
+                           placeholder="e.g., Professor, Admin Staff">
                 </div>
             </div>
 
@@ -298,7 +342,7 @@
                 </div>
             </div>
 
-            <!-- NEW: Other Specific Fields -->
+            <!-- Other Specific Fields -->
             <div id="otherFields" class="stakeholder-specific-fields space-y-6">
                 <h3 class="text-lg font-bold text-gray-800 border-b pb-2 mb-4">Other Details</h3>
                 <div class="form-group">
@@ -510,3 +554,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
